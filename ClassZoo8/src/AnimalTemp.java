@@ -1,3 +1,8 @@
+/*Computer Science Pre-AP
+8th period
+Joe Dilly
+*/
+
 import java.awt.*;
 import java.applet.*;
 
