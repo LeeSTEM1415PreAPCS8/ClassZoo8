@@ -11,7 +11,18 @@ public class tiger extends Applet{
 
 	private void drawAnimal(Graphics g)
 	{
-		
+		g.setColor(Color.PINK);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 	}
 	
 	private void drawHabitat(Graphics g)
