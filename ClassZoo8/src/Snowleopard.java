@@ -6,8 +6,8 @@ public class Snowleopard extends Applet{
 	
 	public void paint(Graphics g)
 	{
-		drawAnimal(g);
 		drawHabitat(g);
+		drawAnimal(g);
 	}
 
 	private void drawAnimal(Graphics g)
@@ -31,24 +31,70 @@ public class Snowleopard extends Applet{
 		
 		//Bars in the Gate
 		g.setColor(new Color(4, 186, 255));
-		g.fillRect(15, 250, 10, 300);
-		g.fillRect(41, 200, 10, 300);
-		g.fillRect(67, 200, 10, 300);
-		g.fillRect(93, 200, 10, 300);
-		g.fillRect(119, 200, 10, 300);
-		g.fillRect(145, 200, 10, 300);
-		g.fillRect(171, 200, 10, 300);
-		g.fillRect(197, 200, 10, 300);
-		g.fillRect(223, 200, 10, 300);
-		g.fillRect(249, 200, 10, 300);
-		g.fillRect(275, 200, 10, 300);
-		g.fillRect(301, 200, 10, 300);
-		g.fillRect(327, 200, 10, 300);
-		g.fillRect(353, 200, 10, 300);
-		g.fillRect(379, 200, 10, 300);
-		g.fillRect(405, 200, 10, 300);
-		g.fillRect(431, 200, 10, 300);
-		g.fillRect(457, 200, 10, 300);
-		g.fillRect(483, 200, 10, 300);
+		g.fillRect(15, 230, 10, 250);
+		g.fillRect(41, 230, 10, 250);
+		g.fillRect(67, 230, 10, 250);
+		g.fillRect(93, 230, 10, 250);
+		g.fillRect(119, 230, 10, 250);
+		g.fillRect(145, 230, 10, 250);
+		g.fillRect(171, 230, 10, 250);
+		g.fillRect(197, 230, 10, 250);
+		g.fillRect(223, 230, 10, 250);
+		g.fillRect(249, 230, 10, 250);
+		g.fillRect(275, 230, 10, 250);
+		g.fillRect(301, 230, 10, 250);
+		g.fillRect(327, 230, 10, 250);
+		g.fillRect(353, 230, 10, 250);
+		g.fillRect(379, 230, 10, 250);
+		g.fillRect(405, 230, 10, 250);
+		g.fillRect(431, 230, 10, 250);
+		g.fillRect(457, 230, 10, 250);
+		g.fillRect(483, 230, 10, 250);
+		g.fillRect(509, 230, 10, 250);
+		g.fillRect(535, 230, 10, 250);
+		g.fillRect(561, 230, 10, 250);
+		g.fillRect(587, 230, 10, 250);
+		g.fillRect(613, 230, 10, 250);
+		g.fillRect(639, 230, 10, 250);
+		g.fillRect(665, 230, 10, 250);
+		g.fillRect(691, 230, 10, 250);
+		g.fillRect(717, 230, 10, 250);
+		g.fillRect(743, 230, 10, 250);
+		g.fillRect(769, 230, 10, 250);
+		g.fillRect(795, 230, 10, 250);
+		g.fillRect(821, 230, 10, 250);
+		g.fillRect(847, 230, 10, 250);
+		g.fillRect(873, 230, 10, 250);
+		g.fillRect(899, 230, 10, 250);
+		g.fillRect(925, 230, 10, 250);
+		g.fillRect(951, 230, 10, 250);
+		g.fillRect(977, 230, 10, 250);
+		g.fillRect(1003, 230, 10, 250);
+		g.fillRect(1029, 230, 10, 250);
+		g.fillRect(1055, 230, 10, 250);
+		g.fillRect(1081, 230, 10, 250);
+		g.fillRect(1107, 230, 10, 250);
+		g.fillRect(1133, 230, 10, 250);
+		g.fillRect(1159, 230, 10, 250);
+		g.fillRect(1185, 230, 10, 250);
+		g.fillRect(1211, 230, 10, 250);
+		g.fillRect(1237, 230, 10, 250);
+		g.fillRect(1263, 230, 10, 250);
+		g.fillRect(1289, 230, 10, 250);
+		g.fillRect(1315, 230, 10, 250);
+		g.fillRect(1341, 230, 10, 250);
+		g.fillRect(1367, 230, 10, 250);
+		g.fillRect(1393, 230, 10, 250);
+		g.fillRect(1419, 230, 10, 250);
+		g.fillRect(1445, 230, 10, 250);
+		g.fillRect(1471, 230, 10, 250);
+		g.fillRect(1497, 230, 10, 250);
+		g.fillRect(1523, 230, 10, 250);
+		g.fillRect(1549, 230, 10, 250);
+		g.fillRect(1575, 230, 10, 250);
+		 
+		//Floor of Habitat
+		g.setColor(new Color (185, 185, 185));
+		g.fillRect(0, 500, 1600, 295);
 	}
 }
