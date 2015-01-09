@@ -94,7 +94,11 @@ public class Snowleopard extends Applet{
 		g.fillRect(1575, 230, 10, 250);
 		 
 		//Floor of Habitat
-		g.setColor(new Color (185, 185, 185));
+		g.setColor(new Color (133, 84, 35));
 		g.fillRect(0, 500, 1600, 295);
+		
+		//Grass
+		g.setColor(new Color (28, 183, 29));
+		
 	}
 }
