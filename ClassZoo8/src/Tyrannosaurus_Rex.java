@@ -1,9 +1,7 @@
-//Richard Poore
-
 import java.awt.*;
 import java.applet.*;
 
-public class wolf extends Applet{
+public class Tyrannosaurus_Rex extends Applet{
 	
 	public void paint(Graphics g)
 	{
@@ -18,6 +16,7 @@ public class wolf extends Applet{
 	
 	private void drawHabitat(Graphics g)
 	{
+		
 		
 	}
 }
