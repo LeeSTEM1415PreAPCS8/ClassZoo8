@@ -48,7 +48,7 @@ public class Pig extends Applet
 		
 		g.setColor(new Color (a,b,c));
 		g.fillOval(100, 450, 500, 200);
-
+//by Connor Simnitt
 
 	}
 	}
