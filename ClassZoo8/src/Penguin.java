@@ -26,12 +26,44 @@ public class Penguin extends Applet{
 	{
 
 		
-	
+		//Body
 		g.setColor(Color.black);
 		g.fillOval(400, 400, 150, 220);
-	
-		g.setColor(new Color (197,197,197));
-		g.fillOval(420, 420, 110, 200);
+
+		//Wings
+		g.setColor(Color.black);
+		g.fillOval(310, 460, 150, 35);
+		g.fillOval(520, 450, 35, 130);
+		
+		//Feet
+		g.setColor(new Color(233,153,65));
+		g.fillOval(425, 610, 35,20);
+		g.fillOval(490, 610, 35,20);
+		
+		
+		
+		//Stomach
+		g.setColor(Color. white);
+		g.fillOval(420, 400, 110, 190);
+		
+		//Head
+		g.setColor(Color.black);
+		g.fillOval(415, 370, 120, 120);
+		
+		//Beak
+		g.setColor(new Color(233,166,27));
+		g.fillRect(460, 450, 30, 10);
+		
+		//Eyes
+		g.setColor(Color. white);
+		g.fillOval(435, 400, 25, 25);
+		g.fillOval(490, 400, 25, 25);
+		
+		
+		g.setColor(Color. blue);
+		g.fillOval(490, 400, 15, 15);
+		
+		
 		
 		
 	}
