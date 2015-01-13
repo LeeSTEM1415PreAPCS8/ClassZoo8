@@ -6,7 +6,7 @@ public class Bunbun extends Applet{
 	public void paint(Graphics g)
 	{
 		drawHabitat(g);
-		drawAnimal(g);
+		drawAnimal(g); 
 	}
 	private void drawHabitat(Graphics g)
 	{
@@ -29,8 +29,10 @@ public class Bunbun extends Applet{
 	private void drawAnimal(Graphics g)
 	{
 		// Brown Bun Bun
-		// Light Brown RGB (new Color(112,67,39))
-		// Dark Brown RGB(new Color(77,50,30))
+		// 	Light Brown RGB (new Color(112,67,39))
+		// 	Dark Brown RGB(new Color(77,50,30))
+		// 	Darker Brown RGB(new Color(40,19,6));
+		
 		g.setColor(new Color(112,67,39));
 			g.fillOval(248,500,50,60);
 		g.setColor(new Color(77,50,30));
@@ -57,8 +59,52 @@ public class Bunbun extends Applet{
 			g.fillOval(259,489,10,9);
 			g.fillOval(277,489,10,9);
 		g.setColor(Color.black);
-		g.fillOval(262,491,5,5);
-		g.fillOval(279,491,5,5);
+			g.fillOval(265,491,5,5);
+			g.fillOval(283,491,5,5);
+		g.setColor(new Color(40,19,6));
+			g.drawOval(273,498,15,15);
+			g.drawOval(257,498,15,15);
+		g.setColor(new Color(112,67,39));
+			g.fillRect(257, 498, 33,5 );
+		g.setColor(new Color(40,19,6));
+			g.fillRect(270, 500, 6,6);
+			
+			//White Bun bun
+		g.setColor(Color.white);
+			g.fillOval(248+500,500,50,60);
+		g.setColor(Color.gray);
+			g.drawOval(248+500,500,50,60);
+			g.drawOval(253+500, 450, 15, 55);
+			g.drawOval(278+500, 450, 15, 55);
+		g.setColor(Color.white);
+			g.fillOval(253+500,480,40,40);
+		g.setColor(Color.gray);
+			g.drawOval(253+500,480,40,40);
+		g.setColor(Color.white);
+			g.fillOval(253+500, 450, 15, 55);
+			g.fillOval(278+500, 450, 15, 55);
+			g.fillOval(242+500,515,20,25);
+			g.fillOval(285+500,515,20,25);
+			g.fillOval(240+500,545,30,25);
+			g.fillOval(272+500,545,30,25);
+		g.setColor(Color.gray);
+			g.drawOval(242+500,515,20,25);
+			g.drawOval(285+500,515,20,25);
+			g.drawOval(240+500,545,30,25);
+			g.drawOval(272+500,545,30,25);
+		g.setColor(Color.gray);
+			g.drawOval(259+500,489+4,10,1);
+			g.drawOval(277+500,489,10,9);
+		g.setColor(Color.black);
+			g.fillOval(279+500,491,5,5);
+			g.fillOval(277+500,491,5,5);
+		g.setColor(Color.black);
+			g.drawOval(273+500,498,15,15);
+			g.drawOval(260+500,498,15,15);
+		g.setColor(Color.white);
+			g.fillRect(257+500, 498, 33,5 );
+		g.setColor(Color.black);
+			g.fillRect(270+500, 500, 6,6);
 	}
 	
 
