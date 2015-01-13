@@ -35,7 +35,7 @@ public class Lion extends Applet {
 		g.fillRect(450, 200, 100, 100);	
 		
 		//Eyes
-		g.setColor(new Color(0,0,0));
+		g.setColor(new Color(250,150,9));
 		g.fillOval(475, 225, 10, 10);
 		
 		
