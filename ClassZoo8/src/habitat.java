@@ -21,12 +21,12 @@ public class habitat extends Applet{
 		//paws
 		g.setColor(Color.white);
 		g.fillOval(345, 580, 110,54);
-		g.setColor(Color.black);
-		g.drawOval(345, 580, 110,54);
+//		g.setColor(Color.black);
+//		g.drawOval(345, 580, 110,54);
 		g.setColor(Color.white);
 		g.fillOval(465, 580, 110,54);
-		g.setColor(Color.black);
-		g.drawOval(465, 580, 110,54);
+	//	g.setColor(Color.black);
+	//	g.drawOval(465, 580, 110,54);
 		
 		//neck and cheeks
 	
@@ -89,12 +89,12 @@ public class habitat extends Applet{
 		//paws
 		g.setColor(Color.white);
 		g.fillOval(345+200, 580, 110,54);
-		g.setColor(Color.black);
-		g.drawOval(345+200, 580, 110,54);
+	//	g.setColor(Color.black);
+	//	g.drawOval(345+200, 580, 110,54);
 		g.setColor(Color.white);
 		g.fillOval(465+200, 580, 110,54);
-		g.setColor(Color.black);
-		g.drawOval(465+200, 580, 110,54);
+	//	g.setColor(Color.black);
+	//	g.drawOval(465+200, 580, 110,54);
 		
 		//neck and cheeks
 	
