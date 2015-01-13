@@ -24,6 +24,9 @@ public class Penguin extends Applet{
 		g.fillRect(0,0,5000,500);
 		g.setColor(new Color(225,221,62));
 		g.fillOval(700, 100, 150, 150);
+		g.setColor(new Color(70,116,172));
+		g.fillOval(100, 550, 225, 75);
+		
 	}
 	
 	private void drawAnimal(Graphics g)
@@ -79,7 +82,6 @@ public class Penguin extends Applet{
 		g.fillOval(440, 410, 15, 15);
 		g.fillOval(495, 410, 15, 15);
 		
-
 
 	      }
 	    
