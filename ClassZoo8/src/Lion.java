@@ -33,9 +33,17 @@ public class Lion extends Applet {
 		g.fillRect(435, 350, 25, 75);
 		g.fillRect(475, 350, 25, 75);
 		
+<<<<<<< HEAD
+		//Fur
 		g.setColor(new Color(250,150,9));
 		g.fillRect(425, 175, 150, 150);
 		
+		//Head
+=======
+		g.setColor(new Color(250,150,9));
+		g.fillRect(425, 175, 150, 150);
+		
+>>>>>>> branch 'master' of https://github.com/LeeSTEM1415PreAPCS8/ClassZoo8.git
 		g.setColor(Color.ORANGE);
 		g.fillRect(450, 200, 100, 100);	
 		
@@ -44,6 +52,17 @@ public class Lion extends Applet {
 		g.fillOval(475, 225, 10, 10);
 		g.fillOval(525, 225, 10, 10);
 		g.fillOval(500, 250, 25, 30);
+<<<<<<< HEAD
+		
+		//Tail
+		g.setColor(Color.ORANGE);
+		g.fillRect(200, 250, 100, 25);
+		
+		g.setColor(new Color(250,150,9));
+		g.fillOval(175, 240, 50, 40);
+		
+=======
+>>>>>>> branch 'master' of https://github.com/LeeSTEM1415PreAPCS8/ClassZoo8.git
 		
 	}
 	
