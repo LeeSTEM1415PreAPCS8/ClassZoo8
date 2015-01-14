@@ -7,31 +7,61 @@ import java.applet.*;
 
 public class Pig extends Applet
 {
-	public void paint(Graphics g)
+	 int x = 300;
+	 int y =	500;
+	public void paint1(Graphics g)
 	{
 		
-		drawHabitat(g);
-		drawAnimal(g);
+		
+		
 	}
-
+	
+	 Thread runner;
+		 
+	 public void start() {
+		     if (runner == null) {
+       
+     }
+   }
+	// public void stop() {
+	  //   if (runner != null) {
+	    //	 runner.stop();
+	    	// runner= null;
+	   //  }
+	 //}
+	 
+	 
+	 public void run() {
+		      while (true) {
+		       repaint(x+5);
+		       //try { Thread.sleep(1); }
+		        //catch (InterruptedException e) { }
+		      }
+		    }
+	 public void paint(Graphics g) {
+		     
+		 drawAnimal(g);		    }
+		 
+	 
+	
 	private void drawAnimal(Graphics g)
 	{
 		
 		//g.fillOval(x, y, width, height);
 		g.setColor(Color.pink);
-		g.fillRect(300, 500, 100, 50);
-		g.fillRect(300, 510, 30, 80);
-		g.fillRect(370, 510, 30, 80);
-		g.fillRect(380, 480, 50, 50);
-		g.fillRect(420, 500, 20, 15);
+		g.fillRect(x, y, 100, 50); //body
+		g.fillRect(x, y + 10, 30, 80); //left leg
+		g.fillRect(x +70, y+10, 30, 80); // right leg
+		g.fillRect(x+80, y-20, 50, 50); // head
+		g.fillRect(x+120, y, 20, 15); //nose
 		
 		g.setColor(Color.white);
-		g.fillOval(420, 490, 10, 10);
+		g.fillOval(420, 490, 10, 10); // eye
 
 		g.setColor(Color.black);
-		g.drawLine(320, 550, 320, 588);
-		g.drawLine(390, 550, 390, 588);
-		g.fillOval(425, 492, 5, 5);
+		g.drawLine(320, 550, 320, 588); // left line
+		g.drawLine(390, 550, 390, 588); // right line
+		g.fillOval(425, 492, 5, 5); // pupil
 
 	
 
