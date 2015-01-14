@@ -17,10 +17,16 @@ public class Penguin extends Applet{
 	private void drawHabitat(Graphics g)
 	{
 
+	
 		g.setColor(Color. white);
 		g.fillRect(0,500,5000,5000);
 		g.setColor(new Color (80,180,210));
 		g.fillRect(0,0,5000,500);
+		g.setColor(new Color(225,221,62));
+		g.fillOval(700, 100, 150, 150);
+		g.setColor(new Color(70,116,172));
+		g.fillOval(100, 550, 225, 75);
+		
 	}
 	
 	private void drawAnimal(Graphics g)
@@ -39,8 +45,11 @@ public class Penguin extends Applet{
 		//Fish
 		g.setColor(new Color(172,188,213));
 		g.fillOval(320, 450, 35, 130);
+		g.fillOval(310, 450, 55, 12);
 		g.setColor(Color. white);
 		g.fillOval(325, 560, 10, 10);
+		g.setColor(Color. black);
+		g.fillOval(325, 565, 6, 6);
 		
 		//Feet
 		g.setColor(new Color(233,153,65));
@@ -66,14 +75,13 @@ public class Penguin extends Applet{
 		//Eyes
 		g.setColor(Color. white);
 		g.fillOval(435, 400, 25, 25);
-		g.fillRect(490, 415, 25, 11);
+		g.fillRect(491, 415, 24, 11);
 		g.fillOval(490, 400, 25, 25);
-		g.fillRect(435, 415, 25, 11);
+		g.fillRect(436, 415, 24, 11);
 		g.setColor(new Color(92,92,92));
 		g.fillOval(440, 410, 15, 15);
 		g.fillOval(495, 410, 15, 15);
 		
-
 
 	      }
 	    
