@@ -27,6 +27,10 @@ public class Bunbun extends Applet{
 			g.fillOval(700, 100, 75, 75);
 		//Tree
 		g.setColor(new Color(77,50,30));
+		Polygon tree = new Polygon();
+		tree.addPoint(608,548);
+		tree.addPoint(715,420);
+		g.fillPolygon(tree);
 		
 	}
 	private void drawAnimal(Graphics g)
