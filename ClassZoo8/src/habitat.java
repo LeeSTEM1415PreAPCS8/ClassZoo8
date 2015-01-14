@@ -280,7 +280,18 @@ public class habitat extends Applet{
 				g.setColor(Color.yellow);
 				g.fillOval(350+600, 490, 80,40);
 				g.fillOval(500+600, 490, 80,40);
-
+				//sun eyes
+				g.setColor(Color.black);
+				g.fillOval(920, 130, 20, 30);
+				g.fillOval(960, 130, 20, 30);
+				//sun white
+				g.setColor(Color.white);
+				g.fillOval(925, 145, 10, 10);
+				g.fillOval(965, 145, 10, 10);
+				//sun mouth
+				g.setColor(Color.black);
+				g.fillOval(935, 165, 30, 10);
+				
 	}
 	
 	private void drawHabitat(Graphics g)
@@ -299,6 +310,8 @@ public class habitat extends Applet{
 	g.fillOval(1300, 400, 300, 300);
 	g.setColor(Color.yellow);
 	g.fillOval(900, 100, 100, 100);
+	
+
 	}
 	
 }
