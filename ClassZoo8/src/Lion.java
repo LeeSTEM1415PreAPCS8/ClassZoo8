@@ -32,12 +32,18 @@ public class Lion extends Applet {
 		g.fillRect(340, 350, 25, 75);
 		g.fillRect(435, 350, 25, 75);
 		g.fillRect(475, 350, 25, 75);
+		
+		g.setColor(new Color(250,150,9));
+		g.fillRect(425, 175, 150, 150);
+		
+		g.setColor(Color.ORANGE);
 		g.fillRect(450, 200, 100, 100);	
 		
-		//Eyes
-		g.setColor(new Color(250,150,9));
+		//Eyes and Mouth
+		g.setColor(Color.BLACK);
 		g.fillOval(475, 225, 10, 10);
-		
+		g.fillOval(525, 225, 10, 10);
+		g.fillOval(500, 250, 25, 30);
 		
 	}
 	
