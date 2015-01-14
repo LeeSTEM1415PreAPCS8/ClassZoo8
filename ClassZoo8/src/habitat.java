@@ -214,7 +214,72 @@ public class habitat extends Applet{
 		g.setColor(Color.blue);
 		g.fillOval(350+400, 490, 80,40);
 		g.fillOval(500+400, 490, 80,40);
-		
+		//4th bunny
+				//body
+			g.setColor(Color.yellow);
+				g.fillOval(400+600, 470, 125,150);
+				//paws
+				
+				g.fillOval(345+600, 580, 110,54);
+			//	g.setColor(Color.black);
+			//	g.drawOval(345+200, 580, 110,54);
+				
+				g.fillOval(465+600, 580, 110,54);
+			//	g.setColor(Color.black);
+			//	g.drawOval(465+200, 580, 110,54);
+				
+				//neck and cheeks
+			
+				
+				g.fillOval(412+600, 380, 110,110);
+				
+				
+				g.fillOval(485+600, 415, 60,60);
+				
+				
+
+				g.fillOval(385+600, 415, 60,60);
+				
+			
+				g.fillOval(410+600, 339, 110,110);
+				
+//				ears
+				
+				g.fillOval(400+600, 280, 50,100);
+				
+				
+				g.fillOval(470+600, 280, 50,100);
+//				
+//				features
+				g.setColor(Color.pink);
+				g.fillOval(437+600, 400, 50, 30);
+				g.setColor(Color.black);
+
+				//eyes
+				g.setColor(Color.black);
+				g.fillOval(434+600, 370, 20, 30);
+				g.fillOval(474+600, 370, 20, 30);
+				//eye circle
+				g.setColor(Color.white);
+				g.fillOval(434+600,378,10,10);
+				g.fillOval(434+640,378,10,10);
+				//
+				g.setColor(Color.gray);
+				g.fillOval(430+600, 480, 70, 90);
+//				ears
+				g.setColor(Color.gray);
+				g.fillOval(480+600, 285, 30, 70);
+				g.fillOval(410+600, 285, 30, 70);
+				//mouth
+				g.setColor(Color.black);
+				g.fillOval(430+600, 440, 70, 10);
+				g.fillRect(452+600, 440, 32, 32);
+				g.setColor(Color.white);
+				g.fillRect(453+600, 443, 30, 28);
+				//hands
+				g.setColor(Color.yellow);
+				g.fillOval(350+600, 490, 80,40);
+				g.fillOval(500+600, 490, 80,40);
 
 	}
 	
