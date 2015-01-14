@@ -84,38 +84,38 @@ public class habitat extends Applet{
 		
 		//2nd bunny
 		//body
-	g.setColor(Color.white);
+	g.setColor(Color.red);
 		g.fillOval(400+200, 470, 125,150);
 		//paws
-		g.setColor(Color.white);
+		
 		g.fillOval(345+200, 580, 110,54);
 	//	g.setColor(Color.black);
 	//	g.drawOval(345+200, 580, 110,54);
-		g.setColor(Color.white);
+		
 		g.fillOval(465+200, 580, 110,54);
 	//	g.setColor(Color.black);
 	//	g.drawOval(465+200, 580, 110,54);
 		
 		//neck and cheeks
 	
-		g.setColor(Color.white);
+		
 		g.fillOval(412+200, 380, 110,110);
 		
-		g.setColor(Color.white);
+		
 		g.fillOval(485+200, 415, 60,60);
 		
 		
-		g.setColor(Color.white);
+
 		g.fillOval(385+200, 415, 60,60);
 		
-		g.setColor(Color.white);
+	
 		g.fillOval(410+200, 339, 110,110);
 		
 //		ears
-		g.setColor(Color.white);
+		
 		g.fillOval(400+200, 280, 50,100);
 		
-		g.setColor(Color.white);
+		
 		g.fillOval(470+200, 280, 50,100);
 //		
 //		features
@@ -145,8 +145,75 @@ public class habitat extends Applet{
 		g.setColor(Color.white);
 		g.fillRect(453+200, 443, 30, 28);
 		//hands
+		g.setColor(Color.red);
 		g.fillOval(350+200, 490, 80,40);
 		g.fillOval(500+200, 490, 80,40);
+		//3rd bunny
+		//body
+	g.setColor(Color.blue);
+		g.fillOval(400+400, 470, 125,150);
+		//paws
+		
+		g.fillOval(345+400, 580, 110,54);
+	//	g.setColor(Color.black);
+	//	g.drawOval(345+200, 580, 110,54);
+		
+		g.fillOval(465+400, 580, 110,54);
+	//	g.setColor(Color.black);
+	//	g.drawOval(465+200, 580, 110,54);
+		
+		//neck and cheeks
+	
+		
+		g.fillOval(412+400, 380, 110,110);
+		
+		
+		g.fillOval(485+400, 415, 60,60);
+		
+		
+
+		g.fillOval(385+400, 415, 60,60);
+		
+	
+		g.fillOval(410+400, 339, 110,110);
+		
+//		ears
+		
+		g.fillOval(400+400, 280, 50,100);
+		
+		
+		g.fillOval(470+400, 280, 50,100);
+//		
+//		features
+		g.setColor(Color.pink);
+		g.fillOval(437+400, 400, 50, 30);
+		g.setColor(Color.black);
+
+		//eyes
+		g.setColor(Color.black);
+		g.fillOval(434+400, 370, 20, 30);
+		g.fillOval(474+400, 370, 20, 30);
+		//eye circle
+		g.setColor(Color.white);
+		g.fillOval(434+400,378,10,10);
+		g.fillOval(434+440,378,10,10);
+		//
+		g.setColor(Color.gray);
+		g.fillOval(430+400, 480, 70, 90);
+//		ears
+		g.setColor(Color.gray);
+		g.fillOval(480+400, 285, 30, 70);
+		g.fillOval(410+400, 285, 30, 70);
+		//mouth
+		g.setColor(Color.black);
+		g.fillOval(430+400, 440, 70, 10);
+		g.fillRect(452+400, 440, 32, 32);
+		g.setColor(Color.white);
+		g.fillRect(453+400, 443, 30, 28);
+		//hands
+		g.setColor(Color.blue);
+		g.fillOval(350+400, 490, 80,40);
+		g.fillOval(500+400, 490, 80,40);
 		
 
 	}
