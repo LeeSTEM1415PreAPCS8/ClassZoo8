@@ -67,10 +67,10 @@ public class Pig extends Applet implements Runnable {
 	{
 		int a = 139 ;  int b = 69 ; int c = 19;
 		g.setColor(Color.blue);
-		g.fillRect(0, 0, 1000, 1000);
+		g.fillRect(0, 0, 9000, 9000);
 		
 		g.setColor(Color.green);
-		g.fillRect(0, 400, 1000, 1000);
+		g.fillRect(0, 400, 9000, 9000);
 		
 		g.setColor(new Color (a,b,c));
 		g.fillOval(100, 450, 500, 200);
