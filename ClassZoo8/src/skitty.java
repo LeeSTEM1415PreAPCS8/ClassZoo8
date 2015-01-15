@@ -13,24 +13,29 @@ public class skitty extends Applet{
 	private void drawAnimal(Graphics g)
 	{
 		int a = 252 ;int b = 230 ; int c = 201 ;
-
+		
+		Polygon LEar = new Polygon();
+		Polygon REar = new Polygon();
+	
 		g.setColor(Color.pink);
-		g.fillOval(450, 450, 200 , 150);
+		g.fillOval(445, 453, 200 , 150);
 		g.fillOval(550, 269, 235, 215);
 		
 		g.setColor(new Color(a,b,c));
 		g.fillOval(566, 329, 205, 155);
-		g.fillOval(520, 475, 130, 100);
 		//body
-		g.fillOval(500, 495, 137, 100);
-		g.fillOval(475, 500, 130, 100);
-		g.fillOval(520, 475, 130, 100);
+		g.fillOval(515, 475, 130, 100);
+		g.fillOval(495, 495, 137, 100);
+		g.fillOval(468, 500, 130, 100);
+		g.fillOval(516, 475, 130, 100);
 	
 		//legs
-		g.fillOval(530, 500, 55, 130);
-		g.fillOval(595, 482, 50, 130);
+		g.fillOval(595, 482, 50, 130);//R
+		g.setColor(Color.black);
+		g.drawOval(445, 453, 200 , 150);
 		g.setColor(new Color(a,b,c));
-		g.fillOval(450, 535, 45, 100);
+		g.fillOval(530, 500, 55, 130);//M
+		g.fillOval(450, 535, 45, 100);//L
 		
 		//face
 		g.setColor(Color.pink);
@@ -53,6 +58,7 @@ public class skitty extends Applet{
 		g.setColor(Color.pink);
 		g.fillOval(335, 259, 125, 235);
 		g.setColor(Color.black);
+		g.drawOval(335, 259, 125, 235);
 		g.drawLine(360, 280, 300, 250);
 		g.drawLine(400, 260, 400, 200);
 		g.drawLine(430, 280, 480, 250);
@@ -62,15 +68,19 @@ public class skitty extends Applet{
 		g.fillOval(375, 180, 45, 45);
 		g.fillOval(460, 225, 45, 45);
 		
+		g.setColor(Color.black);
+		g.drawOval(285, 220, 45, 45);
+		g.drawOval(375, 180, 45, 45);
+		g.drawOval(460, 225, 45, 45);
+		
 		//Ears
+		
 		g.setColor(Color.pink);
-		Polygon LEar = new Polygon();
 		LEar.addPoint(530, 220);
 		LEar.addPoint(630, 278);
 		LEar.addPoint(560, 340);
 		g.fillPolygon(LEar);
-		
-		Polygon REar = new Polygon();
+	
 		REar.addPoint(800,220);
 		REar.addPoint(700,278);
 		REar.addPoint(780,345);
@@ -89,7 +99,7 @@ public class skitty extends Applet{
 	    REFill.addPoint(770, 330);
 	    g.fillPolygon(REFill);
 	    
-
+		
 	}
 	
 	private void drawHabitat(Graphics g)
