@@ -24,8 +24,10 @@ public class Penguin extends Applet{
 		g.fillRect(0,0,5000,500);
 		g.setColor(new Color(225,221,62));
 		g.fillOval(700, 100, 150, 150);
-		g.setColor(new Color(70,116,172));
+		g.setColor(new Color(172,218,232));
 		g.fillOval(100, 550, 225, 75);
+		g.setColor(new Color(70,116,172));
+		g.fillOval(100, 560, 225, 65);
 		
 	}
 	
