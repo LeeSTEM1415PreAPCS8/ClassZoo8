@@ -94,11 +94,32 @@ public class Snowleopard extends Applet{
 		g.fillRect(1575, 230, 10, 250);
 		 
 		//Floor of Habitat
-		g.setColor(new Color (133, 84, 35));
+		g.setColor(new Color (220, 192, 135));
 		g.fillRect(0, 500, 1600, 295);
 		
-		//Grass
-		g.setColor(new Color (28, 183, 29));
+		//Log
+		g.setColor(new Color (95, 74, 37));
+		Polygon log = new Polygon ();
+		log.addPoint(145, 650);
+		log.addPoint(327, 650);
+		log.addPoint(327, 675);
+		log.addPoint(145, 675);
+		log.addPoint(145, 650);
+		g.fillPolygon(log);
+		g.setColor(new Color (239, 194, 146));
+		g.fillOval(127, 645, 39, 30);
+		g.setColor(new Color (95, 74, 37));
+		g.drawOval(127, 645, 39, 30);
+		g.setColor(new Color (239, 194, 146));
+		g.fillOval(309, 645, 39, 30);
+		g.setColor(new Color (95, 74, 37));
+		g.drawOval(309, 645, 39, 30);
+		g.setColor(new Color (95, 74, 37));
+		Polygon log1 = new Polygon ();
+		log1.addPoint(197, 650);
+		log1.addPoint(215, 650);
+		log1.addPoint(x, y);
+		
 		
 	}
 }
