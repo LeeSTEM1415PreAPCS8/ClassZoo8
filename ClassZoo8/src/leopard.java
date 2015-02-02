@@ -6,7 +6,7 @@ Joe Dilly
 import java.awt.*;
 import java.applet.*;
 
-public class AnimalTemp extends Applet{
+public class leopard extends Applet{
 	
 	public void paint(Graphics g)
 	{

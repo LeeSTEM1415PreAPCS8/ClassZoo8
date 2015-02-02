@@ -1,22 +1,28 @@
-/*Computer Science Pre-AP
-8th period
-Joe Dilly
-*/
-
 import java.awt.*;
 import java.applet.*;
 
-public class AnimalTemp extends Applet{
+public class tiger extends Applet{
 	
 	public void paint(Graphics g)
 	{
-		drawHabitat(g);
 		drawAnimal(g);
+		drawHabitat(g);
 	}
 
 	private void drawAnimal(Graphics g)
 	{
-		
+		g.setColor(Color.PINK);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 	}
 	
 	private void drawHabitat(Graphics g)
