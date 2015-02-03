@@ -25,24 +25,28 @@ public class Squid extends Applet{
 		g.fillPolygon(p);
 	
 		//squid body
-		g.fillRect(600, 350, 200, 300);
+		g.fillRect(590, 350, 220, 300);
 		
 		//squid tenticles
 		g.setColor(Color.white);
-		Polygon s = new Polygon();
-		s.addPoint(600, 800);
-		s.addPoint(500, 900);
-		s.addPoint(525, 925);
- 
-		g.fillPolygon(s);
+		g.fillRect(595, 600, 50, 150);
+		g.fillRect(650, 600, 50, 150);
+		g.fillRect(705, 600, 50, 150);
+		g.fillRect(760, 600, 50, 150);
+		g.fillRect(590, 550, -150, 50);
+		g.fillRect(790, 550, 150, 50);
 		
 		//squid eyes
-		g.setColor(new Color(0, 0, 0));
+		g.setColor(Color.black);
+		g.fillOval(588, 393, 224, 90);
+		g.setColor(Color.white);
+		g.drawOval(610, 400, 75, 75);
 		g.fillOval(610, 400, 75, 75);
 		g.fillOval(710, 400, 75, 75);
-		g.setColor(new Color(255, 255, 255));
-		g.fillOval(640, 400, 25, 25);
-		g.fillOval(740, 400, 25, 25);
+		g.setColor(Color.black);
+		g.fillOval(635, 420, 25, 25);
+		g.fillOval(735, 420, 25, 25);
+		
 	}
 	
 	private void drawHabitat(Graphics g)
