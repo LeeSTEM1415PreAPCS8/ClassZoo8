@@ -1,12 +1,15 @@
 /*Computer Science Pre-AP
 8th period
-Joe Dilly
+Richard LaVelle
 */
 
 import java.awt.*;
 import java.applet.*;
 
+
+
 public class Squid extends Applet{
+	
 	
 	public void paint(Graphics g)
 	{
@@ -36,13 +39,15 @@ public class Squid extends Applet{
 		g.fillRect(590, 550, -150, 50);
 		g.fillRect(790, 550, 150, 50);
 		
-		//squid eyes
+		//squid "mask"
 		g.setColor(Color.black);
 		g.fillOval(588, 393, 224, 90);
+		//squid eyes
 		g.setColor(Color.white);
 		g.drawOval(610, 400, 75, 75);
 		g.fillOval(610, 400, 75, 75);
 		g.fillOval(710, 400, 75, 75);
+		//squid pupils
 		g.setColor(Color.black);
 		g.fillOval(635, 420, 25, 25);
 		g.fillOval(735, 420, 25, 25);
@@ -60,7 +65,10 @@ public class Squid extends Applet{
 		g.setColor(new Color(255, 255, 255));
 		g.fillOval(1200,200,50,50);
 		g.fillOval(1100,500,50,50);
-		
+		g.fillOval(100,500,50,50);
+		g.fillOval(200,700,50,50);
+		g.fillOval(300,200,100,100);
+		g.fillOval(1000,500,100,100);
 		
 	}
 }
