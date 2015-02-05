@@ -26,7 +26,7 @@ public class Lion extends Applet {
 		
 		private void drawAnimal(Graphics g){
 		//body
-		g.setColor(Color .ORANGE);
+		g.setColor(Color.ORANGE);
 		g.fillRect(300, 250, 200, 100);
 		g.fillRect(300, 350, 25, 75);
 		g.fillRect(340, 350, 25, 75);
