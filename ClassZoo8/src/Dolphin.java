@@ -1,6 +1,6 @@
 /*Computer Science Pre-AP
 8th period
-Joe Dilly
+David Castenada Tamez
 */
 
 import java.awt.*;
