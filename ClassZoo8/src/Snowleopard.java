@@ -1,3 +1,5 @@
+//Computer Science Pre-Ap
+//8th Period
 //Keamber McCracken
 import java.awt.*;
 import java.applet.*;
@@ -118,7 +120,7 @@ public class Snowleopard extends Applet{
 		Polygon log1 = new Polygon ();
 		log1.addPoint(197, 650);
 		log1.addPoint(215, 650);
-		log1.addPoint(x, y);
+		
 		
 		
 	}
