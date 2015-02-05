@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.applet.*;
+//Nick Garrett
 
 public class Tyrannosaurus_Rex extends Applet{
 	
