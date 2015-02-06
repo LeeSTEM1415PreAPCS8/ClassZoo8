@@ -3,7 +3,7 @@ import javax.swing.*;
 
 import java.awt.*;
 
-final public class Shark {
+final public class dragon {
 	
 	public static final JFrame jframe = null;
 	JFrame frame;
@@ -19,7 +19,7 @@ final public class Shark {
 	boolean right = true;
 	
 	public static void main(String[] args) {
-		new Shark().go();
+		new dragon().go();
 		
 	}
 	
@@ -43,20 +43,20 @@ final public class Shark {
 	
 	class DrawPanel extends JPanel {
 		
-		Rain b1 = new Rain();
-		 Rain b2 = new Rain();
-		 Rain b3 = new Rain();
-		 Rain b4 = new Rain();
-		 Rain b5 = new Rain();
-		 Rain b6 = new Rain();
-		 Rain b7 = new Rain();
-		 Rain b8 = new Rain();
-		 Rain b9 = new Rain();
-		 Rain b10 = new Rain();
-		 Rain b11 = new Rain();
-		 Rain b12 = new Rain();
-		 Rain b13 = new Rain();
-		 Rain b14 = new Rain();
+		 Bubble b1 = new Bubble();
+		 Bubble b2 = new Bubble();
+		 Bubble b3 = new Bubble();
+		 Bubble b4 = new Bubble();
+		 Bubble b5 = new Bubble();
+		 Bubble b6 = new Bubble();
+		 Bubble b7 = new Bubble();
+		 Bubble b8 = new Bubble();
+		 Bubble b9 = new Bubble();
+		 Bubble b10 = new Bubble();
+		 Bubble b11 = new Bubble();
+		 Bubble b12 = new Bubble();
+		 Bubble b13 = new Bubble();
+		 Bubble b14 = new Bubble();
 
 		public void paintComponent(Graphics g) {
 			
@@ -83,7 +83,42 @@ final public class Shark {
 	        
 	        
 	        
-	   
+	        g.drawArc(100, 100, 40, 40, 100, 360);
+	        g.fillOval(100, 100, 20, 20);
+	        g.fillOval(120, 120, 5, 5);
+	        
+	        g.drawArc(400, 100, 40, 40, 100, 360);
+	        g.fillOval(400, 100, 20, 20);
+	        g.fillOval(420, 120, 5, 5);
+	        
+	        g.drawArc(300, 200, 40, 40, 100, 360);
+	        g.fillOval(300, 200, 20, 20);
+	        g.fillOval(320, 220, 5, 5);
+	        
+	        g.drawArc(500, 400, 40, 40, 100, 360);
+	        g.fillOval(500, 400, 20, 20);
+	        g.fillOval(520, 420, 5, 5);
+	        
+	        g.drawArc(600, 700, 40, 40, 100, 360);
+	        g.fillOval(600, 700, 20, 20);
+	        g.fillOval(620, 720, 5, 5);
+	        
+	        g.drawArc(600, 100, 40, 40, 100, 360);
+	        g.fillOval(600, 100, 20, 20);
+	        g.fillOval(620, 120, 5, 5);
+	        
+	        g.drawArc(100, 600, 40, 40, 100, 360);
+	        g.fillOval(100, 600, 20, 20);
+	        g.fillOval(120, 620, 5, 5);
+	        
+	        g.drawArc(100, 400, 40, 40, 100, 360);
+	        g.fillOval(100, 400, 20, 20);
+	        g.fillOval(120, 420, 5, 5);
+	        
+	        g.drawArc(300, 500, 40, 40, 100, 360);
+	        g.fillOval(300, 500, 20, 20);
+	        g.fillOval(320, 520, 5, 5);
+	        
 	        
 	        
 			
@@ -171,10 +206,10 @@ class Rain
 	{
 		if (y <= 1)
 		{
-			y-=800;
+			y+=800;
 			x = (int)(Math.random() * 800);
 		}
-		y++;
+		y--;
 		drawIt(g);
 	}
 	
