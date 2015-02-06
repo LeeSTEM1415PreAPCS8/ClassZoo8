@@ -73,7 +73,6 @@ import javax.swing.SwingUtilities;
 			T.addPoint(490, 450-5);
 			T.addPoint(475, 466-5);
 			g.fillPolygon(T);
-			//g.fillRect(460, 440, 30, 8);
 
 			
 			//Eyes
