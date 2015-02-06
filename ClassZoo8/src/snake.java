@@ -17,7 +17,7 @@ public class snake extends Applet {
 	private void drawAnimal(Graphics g)
 	{
 		g.setColor(Color.GREEN);
-		g.drawCircle(20,20,20,20);
+		g.drawOval(20,20,20,20);
 	}
 	
 	private void drawHabitat(Graphics g)
