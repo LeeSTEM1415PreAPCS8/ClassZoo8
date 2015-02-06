@@ -2,7 +2,7 @@
 //Carlos Salinas
 
 package jframe;
-
+import java.awt.GradientPaint;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -305,6 +305,10 @@ class DrawPanel extends JPanel {
     	g.setColor(Color.green);
     	 g.fillRect(0, 500, 5000, 5000);
     	 g.setColor(new Color(0,162,232));
+    	// GradientPaint gp1 = new GradientPaint(5, 5,
+       //          Color.red, 20, 20, Color.black, true);
+    	
+
     	g.fillRect(0, 0, 5000, 500);
     	//land
     	g.setColor(Color.green);
