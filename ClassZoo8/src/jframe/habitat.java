@@ -297,6 +297,9 @@ class DrawPanel extends JPanel {
     				//sun mouth
     				g.setColor(Color.black);
     				g.fillOval(935, 165, 30, 10);
+    				//tools
+    				g.fillRect(360, 300, 20, 300);
+    				g.fillRect(1100, 300, 20, 300);
     	}
     	}
     	
