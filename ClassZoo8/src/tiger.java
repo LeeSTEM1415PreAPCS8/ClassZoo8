@@ -1,6 +1,6 @@
 import java.awt.*;
 import java.applet.*;
-
+//Stefanie Tijerina
 public class tiger extends Applet{
 	
 	public void paint(Graphics g)
