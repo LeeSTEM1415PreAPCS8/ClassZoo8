@@ -3,6 +3,7 @@
 
 
 	import java.awt.Color;
+import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
@@ -17,7 +18,9 @@ import javax.swing.SwingUtilities;
 	        
 	        Graphics2D g2d = (Graphics2D) g;
 
-		
+
+	    	GradientPaint gp3 = new GradientPaint(5, 200,
+	                 new Color(70,116,172), 100, 100, Color.white, true);
 	    	//Habitat
 			g.setColor(Color. white);
 			g.fillRect(0,500,5000,5000);
@@ -27,7 +30,8 @@ import javax.swing.SwingUtilities;
 			g.fillOval(700, 100, 150, 150);
 			g.setColor(new Color(172,218,232));
 			g.fillOval(100, 550, 225, 75);
-			g.setColor(new Color(70,116,172));
+		       g2d.setPaint(gp3);
+		
 			g.fillOval(100, 560, 225, 65);
 			
 
