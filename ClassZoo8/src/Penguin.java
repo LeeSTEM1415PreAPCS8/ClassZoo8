@@ -16,23 +16,29 @@ import javax.swing.SwingUtilities;
 
 	    private void doDrawing(Graphics g) {
 	        
-	        Graphics2D g2d = (Graphics2D) g;
 
 
-	    	GradientPaint gp3 = new GradientPaint(5, 200,
-	                 new Color(70,116,172), 100, 100, Color.white, true);
+
+
 	    	//Habitat
 			g.setColor(Color. white);
 			g.fillRect(0,500,5000,5000);
-			g.setColor(new Color (80,180,210));
+			//g.setColor(new Color (80,180,210));
+		     Graphics2D gd2 = (Graphics2D) g;
+			   GradientPaint gp1 = new GradientPaint(25, 1500,
+	           new Color(230,220,104), 100, 100,  new Color(80,180,210), true);
+		       gd2.setPaint(gp1);
 			g.fillRect(0,0,5000,500);
-			g.setColor(new Color(225,221,62));
-			g.fillOval(700, 100, 150, 150);
+			//sun
+			//g.setColor(new Color(225,221,62));
+			//g.fillOval(700, 100, 150, 150);
 			g.setColor(new Color(172,218,232));
 			g.fillOval(100, 550, 225, 75);
-		       g2d.setPaint(gp3);
-		
-			g.fillOval(100, 560, 225, 65);
+	           Graphics2D gd1 = (Graphics2D) g;
+			   GradientPaint gp3 = new GradientPaint(25, 200,
+	           new Color(70,116,172), 100, 100, Color.white, true);
+		       gd1.setPaint(gp3);
+		    g.fillOval(100, 560, 225, 65);
 			
 
 			
@@ -62,7 +68,10 @@ import javax.swing.SwingUtilities;
 			
 			
 			//Stomach
-			g.setColor(Color. white);
+		    Graphics2D gd3 = (Graphics2D) g;
+			   GradientPaint gp5 = new GradientPaint(25, 10,
+	          Color.white, 100, 100,  new Color(150,150,150), true);
+		       gd3.setPaint(gp5);
 			g.fillOval(420, 400, 110, 190);
 			
 			//Head

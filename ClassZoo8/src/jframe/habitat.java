@@ -302,25 +302,29 @@ class DrawPanel extends JPanel {
     	
     	private void drawAnimal(Graphics g){
     	{
-    	g.setColor(Color.green);
-    	 g.fillRect(0, 500, 5000, 5000);
-    	 g.setColor(new Color(0,162,232));
-    	// GradientPaint gp1 = new GradientPaint(5, 5,
-       //          Color.red, 20, 20, Color.black, true);
-    	
+    	  	g.setColor(new Color(52,186,7));
+       	 g.fillRect(0, 500, 5000, 5000);
+       	//g.setColor(new Color(0,162,232));
+       	   Graphics2D g2d = (Graphics2D) g;
+       	     GradientPaint gp1 = new GradientPaint(5, 1,
+       	    	                Color.red, 20, 20, Color.black, true);
 
-    	g.fillRect(0, 0, 5000, 500);
-    	//land
-    	g.setColor(Color.green);
-    	g.fillOval(200, 400, 300, 300);
-    	g.fillOval(400, 400, 300, 300);
-    	g.fillOval(700, 400, 300, 300);
-    	g.fillOval(900, 400, 300, 300);
-    	g.fillOval(1000, 400, 300, 300);
-    	g.fillOval(1300, 400, 300, 300);
-    	g.setColor(Color.yellow);
-    	g.fillOval(900, 100, 100, 100);
-    	
+       	    	        g2d.setPaint(gp1);
+       	    	        
+       	g2d.fillRect(0, 0, 5000, 500);
+       	//land
+       //	g.setColor(Color.green);
+       	g.setColor(new Color(52,186,7));
+       	g.fillOval(200, 400, 300, 300);
+       	g.fillOval(400, 400, 300, 300);
+       	g.fillOval(700, 400, 300, 300);
+       	g.fillOval(900, 400, 300, 300);
+       	g.fillOval(1000, 400, 300, 300);
+       	g.fillOval(1300, 400, 300, 300);
+       	g.setColor(Color.yellow);
+       	g.fillOval(900, 100, 100, 100);
+       	
+
 
     	}
     	
