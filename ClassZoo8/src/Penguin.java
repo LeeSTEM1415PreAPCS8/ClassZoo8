@@ -19,7 +19,7 @@ import javax.swing.SwingUtilities;
 	        Graphics2D g2d = (Graphics2D) g;
 
 
-	    	GradientPaint gp3 = new GradientPaint(5, 25,
+	    	GradientPaint gp3 = new GradientPaint(5, 200,
 	                 new Color(70,116,172), 100, 100, Color.white, true);
 	    	//Habitat
 			g.setColor(Color. white);
@@ -30,7 +30,6 @@ import javax.swing.SwingUtilities;
 			g.fillOval(700, 100, 150, 150);
 			g.setColor(new Color(172,218,232));
 			g.fillOval(100, 550, 225, 75);
-		//	g.setColor(new Color(70,116,172));
 		       g2d.setPaint(gp3);
 		
 			g.fillOval(100, 560, 225, 65);
