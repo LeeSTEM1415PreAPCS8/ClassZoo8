@@ -101,7 +101,9 @@ public class Snowleopard extends Applet{
 		
 		//bushes
 		g.setColor(new Color (15, 150, 7));
-		g.fillOval(197, 650, 25, 25);
+		g.fillOval(197, 630, 50, 50);
+		g.fillOval(175, 660, 50, 50);
+		
 		
 		
 		
