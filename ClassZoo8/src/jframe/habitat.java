@@ -2,6 +2,8 @@
 //Carlos Salinas
 
 package jframe;
+import java.awt.*;
+import java.util.Date;
 import java.awt.GradientPaint;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -11,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 class DrawPanel extends JPanel {
+	
 	public void paint(Graphics g)
 	{
 		
@@ -299,7 +302,8 @@ class DrawPanel extends JPanel {
     				g.fillOval(935, 165, 30, 10);
     				//tools
     				g.fillRect(360, 300, 20, 300);
-    				g.fillRect(1100, 300, 20, 300);
+    				g.fillRect(1140, 300, 20, 300);
+    				
     	}
     	}
     	
