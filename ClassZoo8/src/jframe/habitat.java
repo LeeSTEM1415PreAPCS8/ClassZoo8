@@ -2,7 +2,7 @@
 //Carlos Salinas
 
 package jframe;
-
+import java.awt.GradientPaint;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -297,26 +297,37 @@ class DrawPanel extends JPanel {
     				//sun mouth
     				g.setColor(Color.black);
     				g.fillOval(935, 165, 30, 10);
+    				//tools
+    				g.fillRect(360, 300, 20, 300);
+    				g.fillRect(1100, 300, 20, 300);
     	}
     	}
     	
     	private void drawAnimal(Graphics g){
     	{
-    	g.setColor(Color.green);
-    	 g.fillRect(0, 500, 5000, 5000);
-    	 g.setColor(new Color(0,162,232));
-    	g.fillRect(0, 0, 5000, 500);
-    	//land
-    	g.setColor(Color.green);
-    	g.fillOval(200, 400, 300, 300);
-    	g.fillOval(400, 400, 300, 300);
-    	g.fillOval(700, 400, 300, 300);
-    	g.fillOval(900, 400, 300, 300);
-    	g.fillOval(1000, 400, 300, 300);
-    	g.fillOval(1300, 400, 300, 300);
-    	g.setColor(Color.yellow);
-    	g.fillOval(900, 100, 100, 100);
-    	
+    	  	g.setColor(new Color(52,186,7));
+       	 g.fillRect(0, 500, 5000, 5000);
+       	//g.setColor(new Color(0,162,232));
+       	   Graphics2D g2d = (Graphics2D) g;
+       	     GradientPaint gp1 = new GradientPaint(5, 1,
+       	    	                Color.red, 20, 20, Color.black, true);
+
+       	    	        g2d.setPaint(gp1);
+       	    	        
+       	g2d.fillRect(0, 0, 5000, 500);
+       	//land
+       //	g.setColor(Color.green);
+       	g.setColor(new Color(52,186,7));
+       	g.fillOval(200, 400, 300, 300);
+       	g.fillOval(400, 400, 300, 300);
+       	g.fillOval(700, 400, 300, 300);
+       	g.fillOval(900, 400, 300, 300);
+       	g.fillOval(1000, 400, 300, 300);
+       	g.fillOval(1300, 400, 300, 300);
+       	g.setColor(Color.yellow);
+       	g.fillOval(900, 100, 100, 100);
+       	
+
 
     	}
     	
