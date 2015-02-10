@@ -52,7 +52,11 @@ import javax.swing.SwingUtilities;
 			g.fillOval(520, 450, 35, 130);
 			
 			//Fish
-			g.setColor(new Color(172,188,213));
+	           Graphics2D gd8 = (Graphics2D) g;
+			   GradientPaint gp8 = new GradientPaint(15, 100,
+					   new Color(172,188,213), 100, 100,new Color(50,50,50) , true);
+		       gd8.setPaint(gp8);
+			//g.setColor(new Color(172,188,213));
 			g.fillOval(320, 450, 35, 120);
 			g.fillOval(310, 450, 55, 12);
 			g.setColor(Color. white);
