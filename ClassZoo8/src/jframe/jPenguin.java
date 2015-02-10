@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -14,12 +15,13 @@ class DrawPanel extends JPanel {
 	public void paint(Graphics g)
 	{
 		
-		doDrawing(g);
 		drawAnimal(g);
+		doDrawing(g);
+		
 	}
 
 	  private void doDrawing(Graphics g) {
-		  
+		  {
 	  
 
 		
@@ -42,7 +44,7 @@ class DrawPanel extends JPanel {
 	           new Color(70,116,172), 100, 100, Color.white, true);
 		       gd1.setPaint(gp3);
 		    g.fillOval(100, 560, 225, 65);
-			
+		  }
 	  }
 			private void drawAnimal(Graphics g){
 		    	{
@@ -107,7 +109,7 @@ class DrawPanel extends JPanel {
 					g.fillOval(325, 550, 10, 10);
 					g.setColor(Color. black);
 					g.fillOval(325, 555, 6, 6);
-			
+		    	
 	    }
 			}
 
