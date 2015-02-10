@@ -76,7 +76,7 @@ public class Pig extends JFrame {
         add(dpnl);
 
         setSize(360, 300);
-        setTitle("The Pig in it's Natural Habitat");
+        setTitle("The Pig in it's Natural Habitat-Connor Simnitt");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
