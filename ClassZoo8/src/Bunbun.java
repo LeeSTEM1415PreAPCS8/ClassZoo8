@@ -8,7 +8,7 @@ import java.awt.Polygon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-
+// Levi Ross
 class DrawBunBunPanel extends JPanel {
 
     private void doDrawing(Graphics g) {
@@ -43,8 +43,8 @@ class DrawBunBunPanel extends JPanel {
 		g2d.fillOval(380, 300, 500, 200);
 		g2d.fillOval(800, 300, 300, 200);
 		//tree
-		g2d.setColor(new Color(10,152,10));
-		g2d.fillOval(565,470,220,150);
+		//g2d.setColor(new Color(10,152,10));
+		//g2d.fillOval(565,470,220,150);
 		g2d.setColor(new Color(77,50,30));
 		Polygon tree = new Polygon();
 		tree.addPoint(650,540);
@@ -60,10 +60,10 @@ class DrawBunBunPanel extends JPanel {
 		g2d.setPaint(gp3);
 			g2d.fillOval(697,97-90,80,80);
 		
-			// Brown Bun Bun
-			// 	Light Brown RGB (new Color(112,67,39))
-			// 	Dark Brown RGB(new Color(77,50,30))
-			// 	Darker Brown RGB(new Color(40,19,6));
+		/** Brown Bun Bun
+			 	Light Brown RGB (new Color(112,67,39))
+			 	Dark Brown RGB(new Color(77,50,30))
+			 	Darker Brown RGB(new Color(40,19,6)); */
 			
 			g.setColor(new Color(112,67,39));
 				g.fillOval(248,500,50,60);
