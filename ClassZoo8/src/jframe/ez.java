@@ -12,11 +12,9 @@ import java.awt.*;
 final public class ez {
 	    JFrame frame;
 	    DrawPanel drawPanel;
-	    int a = 139 ;  int b = 69 ; int c = 19;
-	  // private int x = 300;
-	  // private int y =	500;
-	    private int oneX = 7+293;
-	    private int oneY = 7+493;
+	    int a = 139 ;  int b = 69 ; int c = 19; //color for mudpit
+	    private int oneX = 300; //variables that control where the pig starts
+	    private int oneY = 500;
 
 	    boolean up = false;
 	    boolean down = true;
@@ -38,7 +36,7 @@ final public class ez {
 	        frame.setVisible(true);
 	        frame.setResizable(false);
 	        frame.setSize(800, 800);
-	        frame.setLocation(375, 55);
+	        frame.setLocation(375, 55);  //opens up the jframe
 	        moveIt();
 	    }
 
@@ -46,7 +44,7 @@ final public class ez {
 	    	
 	        public void paintComponent(Graphics g) {
 	            
-	            Graphics2D g2d = (Graphics2D) g;
+	            Graphics2D g2d = (Graphics2D) g; //where the pig and the landscape is created
 	           
 	            GradientPaint gp1 = new GradientPaint(0, 0, Color.red, 30, 50, Color.blue, true); g2d.setPaint(gp1);
 
@@ -74,7 +72,7 @@ final public class ez {
 	    		Ellipse2D.Double pupil = new Ellipse2D.Double(oneX+125, oneY-8, 5, 5); g2d.fill(pupil);  // pupil
 	        }
 	        }
-	    	    private void moveIt() {	    
+	    	    private void moveIt() {	    //when the X and Y get past these points, they switch direction
 	    	        while(true){
 	    	            if(oneX >= 690){
 	    	                right = false;
