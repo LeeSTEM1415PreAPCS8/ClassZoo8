@@ -11,11 +11,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-class DrawPanel extends JPanel {
+class DrawPenguinPanel extends JPanel {
 	public void paint(Graphics g)
 	{
 		
-		drawAnimal(g);
 		doDrawing(g);
 		
 	}
@@ -44,10 +43,9 @@ class DrawPanel extends JPanel {
 	           new Color(70,116,172), 100, 100, Color.white, true);
 		       gd1.setPaint(gp3);
 		    g.fillOval(100, 560, 225, 65);
-		  }
-	  }
-			private void drawAnimal(Graphics g){
-		    	{
+		    
+		  
+
 		    		//Body
 					g.setColor(Color.black);
 					g.fillOval(400, 400, 150, 220);
@@ -109,8 +107,8 @@ class DrawPanel extends JPanel {
 					g.fillOval(325, 550, 10, 10);
 					g.setColor(Color. black);
 					g.fillOval(325, 555, 6, 6);
-		    	
-	    }
+	  }
+	    
 			}
 
 		    @Override
@@ -123,13 +121,18 @@ class DrawPanel extends JPanel {
 
 		public class jPenguin extends JFrame {
 
-		    public jPenguin() {
+		    /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public jPenguin() {
 		        initUI();
 		    }
 
 		    public final void initUI() {
 
-		        DrawPanel dpnl = new DrawPanel();
+		        DrawPenguinPanel dpnl = new DrawPenguinPanel();
 		        add(dpnl);
 
 		        setSize(960, 900);
@@ -142,7 +145,7 @@ class DrawPanel extends JPanel {
 
 		        SwingUtilities.invokeLater(new Runnable() {
 		            public void run() {
-		                habitat ex = new habitat();
+		                jPenguin ex = new jPenguin();
 		                ex.setVisible(true);
 		            }
 		        });
