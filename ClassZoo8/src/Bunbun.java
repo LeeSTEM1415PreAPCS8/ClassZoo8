@@ -1,16 +1,22 @@
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
+import java.util.Date;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+
+
 // Levi Ross
 class DrawBunBunPanel extends JPanel {
-
+	
+	
+	
     private void doDrawing(Graphics g) {
         
         Graphics2D g2d = (Graphics2D) g;
@@ -59,6 +65,16 @@ class DrawBunBunPanel extends JPanel {
                 Color.yellow, 2, 2, Color.orange, true);
 		g2d.setPaint(gp3);
 			g2d.fillOval(697,97-90,80,80);
+		//Clouds
+		int x=0;
+		if (x<1000)
+			x++;
+		g.setColor(Color.white);
+		g.fillOval(x+2,59,400,50);
+		g.fillOval(x+295,109,400,50);
+		g.fillOval(x+827,9,400,50);
+		g.fillOval(x+390,12,400,50);
+		g.fillOval(x+730,100,400,50);
 		
 		/** Brown Bun Bun
 			 	Light Brown RGB (new Color(112,67,39))
@@ -162,6 +178,7 @@ public class Bunbun extends JFrame {
         setTitle("Bun Bun Habitat Hun");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      
     }
 
     public static void main(String[] args) {
@@ -172,5 +189,7 @@ public class Bunbun extends JFrame {
                 ex.setVisible(true);
             }
         });
+        
     }
+    
 }
