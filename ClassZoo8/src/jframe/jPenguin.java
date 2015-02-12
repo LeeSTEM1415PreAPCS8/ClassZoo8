@@ -1,29 +1,46 @@
 //Jesse Contreras [Period 8]
 package jframe;
-import java.awt.GradientPaint;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Polygon;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
-class DrawPenguinPanel extends JPanel {
-	public void paint(Graphics g)
-	{
-		
-		doDrawing(g);
-		
-	}
+import javax.swing.*;
 
-	  private void doDrawing(Graphics g) {
-		  {
-	  
+import java.awt.*;
 
-		
-			  // Draw Habitat
+final public class jPenguin {
+
+    JFrame frame;
+    DrawPanel drawPanel;
+
+    private int oneX = 7;
+    private int oneY = 7;
+
+    boolean up = false;
+    boolean down = true;
+    boolean left = false;
+    boolean right = true;
+
+    public static void main(String[] args) {
+        new jPenguin().go();
+    }
+
+    private void go() {
+        frame = new JFrame("Test");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        drawPanel = new DrawPanel();
+
+        frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
+
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setSize(960, 900);
+        frame.setLocation(375, 55);
+        moveIt();
+    }
+
+    class DrawPanel extends JPanel {
+        public void paintComponent(Graphics g) {
+        	  // Draw Habitat
 			// Snow Floor
 			g.setColor(Color. white);
 			g.fillRect(0,500,5000,5000);
@@ -34,6 +51,12 @@ class DrawPenguinPanel extends JPanel {
 			new Color(230,220,104), 100, 100,  new Color(80,180,210), true);
 			gd2.setPaint(gp1);
 			g.fillRect(0,0,5000,500);
+			
+			//Clouds
+			g.setColor(Color. white);
+	g.fillOval(oneX, 100, 100, 100);
+		
+			
 			
 			//Fishing Hole
 			g.setColor(new Color(172,218,232));
@@ -107,47 +130,44 @@ class DrawPenguinPanel extends JPanel {
 			g.fillOval(325, 550, 10, 10);
 			g.setColor(Color. black);
 			g.fillOval(325, 555, 6, 6);
-	  }
-	    
-			}
+ 
+        }
+    }
 
-		    @Override
-		    public void paintComponent(Graphics g) {
-		        
-		        super.paintComponent(g);
-		        doDrawing(g);
-		    }
-		}
-
-		public class jPenguin extends JFrame {
-
-		    /**
-			 * 
-			 */
-			private static final long serialVersionUID = 1L;
-
-			public jPenguin() {
-		        initUI();
-		    }
-
-		    public final void initUI() {
-
-		        DrawPenguinPanel dpnl = new DrawPenguinPanel();
-		        add(dpnl);
-
-		        setSize(960, 900);
-		        setTitle("jframe Penguin");
-		        setLocationRelativeTo(null);
-		        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		    }
-
-		    public static void main(String[] args) {
-
-		        SwingUtilities.invokeLater(new Runnable() {
-		            public void run() {
-		                jPenguin ex = new jPenguin();
-		                ex.setVisible(true);
-		            }
-		        });
-		    }
-		}
+    private void moveIt() {
+        while(true){
+            if(oneX >= 283){
+                right = false;
+                left = true;
+            }
+            if(oneX <= 7){
+                right = true;
+                left = false;
+            }
+            if(oneY >= 259){
+                up = true;
+                down = false;
+            }
+            if(oneY <= 7){
+                up = false;
+                down = true;
+            }
+            if(up){
+                oneY--;
+            }
+            if(down){
+                oneY++;
+            }
+            if(left){
+                oneX--;
+            }
+            if(right){
+                oneX++;
+            }
+            try{
+                Thread.sleep(10);
+            } catch (Exception exc){}
+            frame.repaint();
+        }
+    }
+}
