@@ -30,7 +30,7 @@ import java.awt.Graphics2D;
 	        frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
 
 	        frame.setVisible(true);
-	        frame.setResizable(true);
+	        frame.setResizable(false);
 	        frame.setSize(900, 835);
 	        frame.setLocation(5, 5);
 	        moveIt();
