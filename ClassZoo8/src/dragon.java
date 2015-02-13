@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.applet.*;
 
-public class  extends Applet{
+public class dragon extends Applet{
 	
 	public void paint(Graphics g)
 	{
@@ -11,14 +11,14 @@ public class  extends Applet{
 
 	private void drawAnimal(Graphics g)
 	{
-		g.setColor(Color.);
+		g.setColor(Color.green);
 		g.fillRect(100, 100, 100, 100);
 	}
 	
 	private void drawHabitat(Graphics g)
 	{
-		g.setColor();
-		g.Rect(100, 100, 100, 100);
+		g.setColor(Color.blue);
+		g.drawRect(100, 100, 100, 100);
 		
 	}
 }
