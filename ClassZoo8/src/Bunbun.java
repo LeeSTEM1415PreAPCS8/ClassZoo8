@@ -57,6 +57,7 @@ import java.awt.Graphics2D;
 	   		g.fillOval(oneX-380,9,400,50);
 	   		g.fillOval(oneX+390,12,400,50);
 	   		g.fillOval(oneX-430,100,400,50);
+	   		g.fillOval(oneX-744,48,400,50);
 	   	//Rainbow bow
 	        GradientPaint gpRO = new GradientPaint(5, 25,
 	                Color.red, 2, 2, Color.orange, true);
@@ -200,11 +201,12 @@ import java.awt.Graphics2D;
 
 	    private void moveIt() {
 	        while(true){
-	            if(oneX >= 700){
-	                right = false;
-	                left = true;
+	            if(oneX >= 800){
+	            	oneX =-45;
+	              right = false;
+	              left = true;
 	            }
-	            if(oneX <= 7){
+	           if(oneX <= 7){
 	                right = true;
 	                left = false;
 	            }
@@ -213,9 +215,9 @@ import java.awt.Graphics2D;
 	            }
 	            if(right){
 	                oneX++;
-	            }
+	            } 
 	            try{
-	                Thread.sleep(10);
+	                Thread.sleep(70);
 	            } catch (Exception exc){}
 	            frame.repaint();
 	        }
