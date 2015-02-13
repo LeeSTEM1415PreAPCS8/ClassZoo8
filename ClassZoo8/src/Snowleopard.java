@@ -103,7 +103,31 @@ public class Snowleopard extends Applet{
 		g.setColor(new Color (15, 150, 7));
 		g.fillOval(197, 630, 50, 50);
 		g.fillOval(175, 660, 50, 50);
+		g.fillOval(220, 660, 50, 50);
 		
+		
+		
+		
+		
+		//Animal Head
+		g.setColor(new Color (255, 255, 255, 255));
+		g.fillOval(500, 450, 100, 100);
+		
+		//Right Eye
+		g.setColor(new Color (0, 0, 0));
+		g.fillOval(556, 485, 25, 25);
+		g.setColor(new Color (19, 162, 230));
+		g.fillOval(563, 490, 13, 13);
+		
+		//Left Eye
+		g.setColor(new Color (0, 0, 0));
+		g.fillOval(520, 485, 25, 25);
+		g.setColor(new Color (19, 162, 230));
+		g.fillOval(525, 490, 13, 13);
+		
+		//Body
+		g.setColor(new Color (232,232, 232));
+		g.fillRect(581,)
 		
 		
 		
