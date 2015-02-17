@@ -6,6 +6,10 @@ import javax.swing.*;
 
 import java.awt.*;
 
+/*  I copied most of this java projects template from the tester file,
+ *  thats why some of the coding is disabled and set as a comment.
+ */
+ 
 final public class jPenguin {
 
     JFrame frame;
@@ -14,16 +18,17 @@ final public class jPenguin {
     private int oneX = 7;
     private int oneY = 7;
 
-    boolean up = false;
-    boolean down = true;
-    boolean left = false;
-    boolean right = true;
+    //boolean up = false;
+    //boolean down = true;
+    //boolean left = false;
+   // boolean right = true;
 
     public static void main(String[] args) {
         new jPenguin().go();
     }
 
     private void go() {
+    	//JFrame
         frame = new JFrame("Test");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -52,10 +57,15 @@ final public class jPenguin {
 			gd2.setPaint(gp1);
 			g.fillRect(0,0,5000,500);
 			
-			//Clouds
-			g.setColor(Color. white);
-	g.fillOval(oneX, 100, 100, 100);
-		
+			//Moving Clouds
+			g.setColor(new Color(220,220,220));
+	g.fillOval(oneX, 100, 200, 50);
+	
+	g.fillOval(oneX+200, 100, 100, 50);
+	
+	g.fillOval(oneX+350, 100, 250, 50);
+	
+	g.fillOval(oneX+600, 100, 150, 50);	
 			
 			
 			//Fishing Hole
@@ -136,34 +146,33 @@ final public class jPenguin {
 
     private void moveIt() {
         while(true){
-            if(oneX >= 283){
-                right = false;
-                left = true;
+            if(oneX >= 960){
+               oneX=-850;
             }
-            if(oneX <= 7){
-                right = true;
-                left = false;
-            }
-            if(oneY >= 259){
-                up = true;
-                down = false;
-            }
-            if(oneY <= 7){
-                up = false;
-                down = true;
-            }
-            if(up){
-                oneY--;
-            }
-            if(down){
-                oneY++;
-            }
-            if(left){
-                oneX--;
-            }
-            if(right){
+          //  if(oneX <= 7){
+          //      right = true;
+           //     left = false;
+           // }
+           // if(oneY >= 259){
+            //    up = true;
+            //    down = false;
+            //}
+           // if(oneY <= 7){
+            //    up = false;
+             //   down = true;
+           // }
+           // if(up){
+           //    oneY--;
+           // }
+           // if(down){
+           //     oneY++;
+           //}
+            //if(left){
+            //    oneX--;
+          //  }
+          //  if(right){
                 oneX++;
-            }
+          //  }
             try{
                 Thread.sleep(10);
             } catch (Exception exc){}
