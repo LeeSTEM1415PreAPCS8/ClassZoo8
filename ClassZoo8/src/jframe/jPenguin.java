@@ -1,19 +1,17 @@
-
 //Jesse Contreras [Period 8]
 
 package jframe;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Scanner;
 
 final public class jPenguin {
 
     JFrame frame;
     DrawPanel drawPanel;
 
-    private int oneX = 7;
-    private int oneY = 967;
+    private short oneX = 7;
+    private short oneY = 967;
     
     boolean up = false;
     boolean down = true;
@@ -25,7 +23,7 @@ final public class jPenguin {
     }
 
     private void go() {
-        frame = new JFrame("Test");
+        frame = new JFrame("jframe Penguin");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         drawPanel = new DrawPanel();
@@ -73,7 +71,7 @@ final public class jPenguin {
 			GradientPaint sk10 = new GradientPaint(25, 1500,
 			new Color(230,220,104), 100, 100,  new Color(20,40,125), true);
 			
-	
+			//Set upon coordinates of oneX till when the sky will change
 			if (-192<= oneX && oneX<=192)
 				sk1.setPaint(sk2);
 				
@@ -93,7 +91,7 @@ final public class jPenguin {
 			g.fillRect(0,0,5000,500);
 				
 			
-			//Clouds
+			//1st set of Clouds
 			g.setColor(new Color(240,240,240));
 			g.fillOval(oneX    , 100, 200, 89);
 			g.fillOval(oneX+240, 170, 110, 60);
@@ -101,7 +99,7 @@ final public class jPenguin {
 			g.fillOval(oneX+460, 120, 230, 100);
 			g.fillOval(oneX+680,  25, 200, 95);
 			g.fillOval(oneX+760, 180, 200, 55);
-		
+			//2nd Set of Clouds
 			g.fillOval(oneY    , 100, 200, 89);
 			g.fillOval(oneY+240, 170, 110, 60);
 			g.fillOval(oneY+220,  50, 200, 75);
