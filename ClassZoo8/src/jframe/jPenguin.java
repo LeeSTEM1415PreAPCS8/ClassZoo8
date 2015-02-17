@@ -50,8 +50,8 @@ final public class jPenguin {
 			g.fillRect(0,500,5000,5000);
 			
 			// Sky
-			/*The sky is set to an interval to cycle throughout the day
-			 * 
+			/*The sky is set to an interval to cycle throughout the day.
+			 * these are the different gradient colors used for the sky.
 			 */
 			Graphics2D sk1 = (Graphics2D) g;
 			GradientPaint sk2 = new GradientPaint(25, 1500,
@@ -153,12 +153,12 @@ final public class jPenguin {
 			T.addPoint(475, 466-5);
 			g.fillPolygon(T);
 
-			//Eyes
+			//Eye Shape
 			g.setColor(Color. white);
 			g.fillOval(435, 400, 25, 25);
-			g.fillRect(491, 415, 25, 11);
+			g.fillRect(491, 415, 24, 11);
 			g.fillOval(490, 400, 25, 25);
-			g.fillRect(436, 415, 25, 11);
+			g.fillRect(436, 415, 24, 11);
 			
 			//Pupils
 			g.setColor(new Color(92,92,92));
