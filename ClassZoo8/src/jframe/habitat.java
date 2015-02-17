@@ -50,7 +50,7 @@ moveIt();
 
 class DrawPanel extends JPanel {
 	
-
+//sky
 public void paintComponent(Graphics g) {
  	g.setColor(new Color(52,186,7));
 	 g.fillRect(0, 500, 5000, 5000);
@@ -95,20 +95,22 @@ g.fillOval(360+x,70+y,50,50);
 g.fillOval(420+x,70+y,50,50);
 
 //
+/*
 g.setColor(Color.yellow);
-g.fillOval(x, y, 100, 100);
+g.fillOval(800, 100, 100, 100);
 //sun eyes
 g.setColor(Color.black);
-g.fillOval(x+22, y+10, 20, 30);
-g.fillOval(x+53, y+10, 20, 30);
+g.fillOval(22, 10, 20, 30);
+g.fillOval(53, 10, 20, 30);
 //sun white
 g.setColor(Color.white);
-g.fillOval(x+57, y+25, 10, 10);
-g.fillOval(x+25, y+25, 10, 10);
+g.fillOval(57, 25, 10, 10);
+g.fillOval(25, 25, 10, 10);
 //sun mouth
 g.setColor(Color.black);
-g.fillOval(x+33, y+50, 30, 10);
-  Graphics2D g2d = (Graphics2D) g;
+g.fillOval(33, 50, 30, 10);
+*/ 
+Graphics2D g2d = (Graphics2D) g;
 GradientPaint gp1 = new GradientPaint(5, 5,
             Color.red, 20, 20, Color.black, true);
 
@@ -415,14 +417,16 @@ g.fillRect(oneX, oneY, 6, 6);
 private void moveIt() {
 
 while(true){
-	int m=1;
-	if(x>1140)
+	int m=5;
+	
+	
+	if(x<1140)
 		   m=m*1;
-	if(x<0)
-		   m=m*-1;
 	x=x+m;
-
-
+if(x>1640)
+		
+		   m=m*-500;
+x=x+m;
 
 try{
 

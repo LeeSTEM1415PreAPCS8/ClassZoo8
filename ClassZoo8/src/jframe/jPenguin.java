@@ -1,10 +1,11 @@
+
 //Jesse Contreras [Period 8]
+
 package jframe;
 
-
 import javax.swing.*;
-
 import java.awt.*;
+import java.util.Scanner;
 
 final public class jPenguin {
 
@@ -12,8 +13,8 @@ final public class jPenguin {
     DrawPanel drawPanel;
 
     private int oneX = 7;
-    private int oneY = 7;
-
+    private int oneY = 967;
+    
     boolean up = false;
     boolean down = true;
     boolean left = false;
@@ -38,25 +39,75 @@ final public class jPenguin {
         moveIt();
     }
 
-    class DrawPanel extends JPanel {
-        public void paintComponent(Graphics g) {
+    class DrawPanel extends JPanel 
+    {
+        
+    	public void paintComponent(Graphics g) 
+        {
         	  // Draw Habitat
 			// Snow Floor
 			g.setColor(Color. white);
 			g.fillRect(0,500,5000,5000);
-
+			
 			// Sky
-			Graphics2D gd2 = (Graphics2D) g;
-			GradientPaint gp1 = new GradientPaint(25, 1500,
-			new Color(230,220,104), 100, 100,  new Color(80,180,210), true);
-			gd2.setPaint(gp1);
+			/*The sky is set to an interval to cycle throughout the day
+			 * 
+			 */
+			Graphics2D sk1 = (Graphics2D) g;
+			GradientPaint sk2 = new GradientPaint(25, 1500,
+			new Color(230,220,104), 100, 100,  new Color(80,180,225), true);
+		
+			Graphics2D sk3 = (Graphics2D) g;
+			GradientPaint sk4 = new GradientPaint(25, 1500,
+			new Color(230,220,104), 100, 100,  new Color(65,145,200), true);
+			
+			Graphics2D sk5 = (Graphics2D) g;
+			GradientPaint sk6 = new GradientPaint(25, 1500,
+			new Color(230,220,104), 100, 100,  new Color(50,110,175), true);
+			
+			Graphics2D sk7 = (Graphics2D) g;
+			GradientPaint sk8 = new GradientPaint(25, 1500,
+			new Color(230,220,104), 100, 100,  new Color(35,85,150), true);
+			
+			Graphics2D sk9 = (Graphics2D) g;
+			GradientPaint sk10 = new GradientPaint(25, 1500,
+			new Color(230,220,104), 100, 100,  new Color(20,40,125), true);
+			
+	
+			if (-192<= oneX && oneX<=192)
+				sk1.setPaint(sk2);
+				
+			if (-193>=oneX && oneX>=-384 || 193<=oneX && oneX<=384 ) 
+				sk3.setPaint(sk4);
+				
+			if (-385>=oneX && oneX>=-576 || 385<=oneX && oneX<=576 ) 
+				sk5.setPaint(sk6);
+				
+			if (-577>=oneX && oneX>=-768 || 577<=oneX && oneX<=768 ) 
+				sk7.setPaint(sk8);
+				
+			if (-769>=oneX && oneX>=-960 || 769<=oneX && oneX<=960 ) 
+				sk9.setPaint(sk10);
+				
+			
 			g.fillRect(0,0,5000,500);
+				
 			
 			//Clouds
-			g.setColor(Color. white);
-	g.fillOval(oneX, 100, 100, 100);
+			g.setColor(new Color(240,240,240));
+			g.fillOval(oneX    , 100, 200, 89);
+			g.fillOval(oneX+240, 170, 110, 60);
+			g.fillOval(oneX+220,  50, 200, 75);
+			g.fillOval(oneX+460, 120, 230, 100);
+			g.fillOval(oneX+680,  25, 200, 95);
+			g.fillOval(oneX+760, 180, 200, 55);
 		
-			
+			g.fillOval(oneY    , 100, 200, 89);
+			g.fillOval(oneY+240, 170, 110, 60);
+			g.fillOval(oneY+220,  50, 200, 75);
+			g.fillOval(oneY+460, 120, 230, 100);
+			g.fillOval(oneY+680,  25, 200, 95);
+			g.fillOval(oneY+760, 180, 200, 55);
 			
 			//Fishing Hole
 			g.setColor(new Color(172,218,232));
@@ -77,17 +128,13 @@ final public class jPenguin {
 			g.setColor(Color.black);
 			g.fillOval(310, 460, 150, 35);
 			g.fillOval(520, 450, 35, 130);
-					
-
-					
+							
 			//Feet
 			g.setColor(new Color(233,153,65));
 			g.fillOval(425, 610, 35,20);
 			g.fillOval(490, 610, 35,20);
 					
-					
-					
-				//Stomach
+			//Stomach
 			Graphics2D gd3 = (Graphics2D) g;
 			GradientPaint gp5 = new GradientPaint(25, 10,
 			Color.white, 100, 100,  new Color(150,150,150), true);
@@ -100,53 +147,47 @@ final public class jPenguin {
 					
 			//Beak
 			g.setColor(new Color(233,166,27));
-				
 			Polygon T=new Polygon();
 			T.addPoint(460, 450-5);
 			T.addPoint(490, 450-5);
 			T.addPoint(475, 466-5);
 			g.fillPolygon(T);
 
-					
 			//Eyes
 			g.setColor(Color. white);
 			g.fillOval(435, 400, 25, 25);
-			g.fillRect(491, 415, 24, 11);
+			g.fillRect(491, 415, 25, 11);
 			g.fillOval(490, 400, 25, 25);
-			g.fillRect(436, 415, 24, 11);
+			g.fillRect(436, 415, 25, 11);
+			
+			//Pupils
 			g.setColor(new Color(92,92,92));
 			g.fillOval(440, 410, 15, 15);
 			g.fillOval(495, 410, 15, 15);
-					
-			//Fish
+
+			
+				//Draw Fish
 			Graphics2D gd8 = (Graphics2D) g;
 			GradientPaint gp8 = new GradientPaint(15, 100,
 			new Color(172,188,213), 100, 100,new Color(75,75,75) , true);
 			gd8.setPaint(gp8);
-			//g.setColor(new Color(172,188,213));
 			g.fillOval(320, 450, 35, 120);
 			g.fillOval(310, 450, 55, 12);
 			g.setColor(Color. white);
 			g.fillOval(325, 550, 10, 10);
 			g.setColor(Color. black);
 			g.fillOval(325, 555, 6, 6);
- 
+			
         }
     }
 
     private void moveIt() {
         while(true){
-            if(oneX >= 283){
-                right = false;
-                left = true;
-            }
-            if(oneX <= 7){
-                right = true;
-                left = false;
-            }
-            if(oneY >= 259){
-                up = true;
-                down = false;
+            if(oneX >= 960){
+                oneX= -960;
+            }            
+            if(oneY >= 960){
+                oneY = -960;
             }
             if(oneY <= 7){
                 up = false;
@@ -171,3 +212,4 @@ final public class jPenguin {
         }
     }
 }
+
