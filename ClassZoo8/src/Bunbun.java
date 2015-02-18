@@ -30,7 +30,7 @@ import java.awt.Graphics2D;
 	        frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
 
 	        frame.setVisible(true);
-	        frame.setResizable(true);
+	        frame.setResizable(false);
 	        frame.setSize(900, 835);
 	        frame.setLocation(5, 5);
 	        moveIt();
@@ -188,14 +188,7 @@ import java.awt.Graphics2D;
 				g.setColor(Color.white);
 					g.fillRect(257+300, 498+1, 33,5 );
 				g.setColor(Color.black);
-					g.fillRect(270+301, 500, 6,6);   
-	           
-	           
-	           
-	           
-	           
-	           
-	           
+					g.fillRect(270+301, 500, 6,6);         
 	        }
 	    }
 
