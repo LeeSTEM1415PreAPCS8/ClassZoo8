@@ -13,18 +13,16 @@ final public class Fishy {
 	
 	DrawPanel drawPanel;
 	
+	//Set the initial x and y for drawing the fish
 	private int oneX = 200;
-	
 	private int oneY = 550;
 	
+	// Set the initial direction of movement
 	boolean up = false;
-	
 	boolean down = true;
-	
 	boolean left = false;
-	
 	boolean right = true;
-	
+
 	public static void main(String[] args) {
 		new Fishy().go();
 		}
@@ -52,6 +50,7 @@ final public class Fishy {
 	}
 	
 	class DrawPanel extends JPanel {
+		
 	
 		public void paintComponent(Graphics g) {
 			Graphics2D g2d = (Graphics2D) g;
@@ -85,6 +84,7 @@ final public class Fishy {
 
 		g.fillOval(oneX, oneY, 100, 60);// fish
 		
+		//Set the initial x for fish when going from left to right
 			int finx, eyex;
 			
 			if (right)
@@ -112,7 +112,7 @@ final public class Fishy {
 	private void moveIt() {
 	
 		while(true){
-		
+		//movement of fish in pond going left
 			if(oneX >= 600){
 			
 				right = false;
@@ -120,7 +120,7 @@ final public class Fishy {
 				left = true;
 				
 			}
-			
+		//movement of fish in pond going right
 			if(oneX <= 200){
 			
 				right = true;
@@ -129,7 +129,7 @@ final public class Fishy {
 				left = false;
 				
 			}
-			
+			//movement of fish in pond going down
 			if(oneY >= 550){
 			
 				up = true;
@@ -137,7 +137,7 @@ final public class Fishy {
 				down = false;
 			
 			}
-			
+			//movement of fish in pond going up
 			if(oneY <= 600){
 			
 				up = false;
