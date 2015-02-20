@@ -1,16 +1,39 @@
+//kathleen mccusker 8th period
 import java.awt.*;
 import java.applet.*;
+
 
 public class hippo extends Applet{
 	
 	public void paint(Graphics g)
 	{
-		drawAnimal(g);
 		drawHabitat(g);
+		drawAnimal(g);
+		
 	}
 
 	private void drawAnimal(Graphics g)
 	{
+		//hippo body
+		g.setColor(new Color(64, 64, 64));
+		g.fillOval(1195, 450, 350, 200);
+		g.drawOval(1195, 450, 350, 200);
+		
+		//hippo face
+		g.setColor(new Color(64, 64, 64));
+		g.fillOval(1100, 435, 200, 125);
+		g.setColor(Color.black);
+		g.drawOval(1100, 435, 200, 125);
+	
+		
+		//hippo legs
+		g.setColor(new Color(64, 64, 64));
+		g.fillRect(1245, 600, 45, 60);
+		g.fillRect(1295, 600, 45, 60);
+		g.fillRect(1450, 600, 45, 60);
+		g.fillRect(1400, 600, 45, 60);
+		
+		
 		
 	}
 	
@@ -270,16 +293,7 @@ public class hippo extends Applet{
 		int x = 0;
 		for (x = 0; x<2000; x = x + 15)
 		g.fillRect(x, 195, 7, 105);
-		//hippo body
-		g.setColor(Color.black);
-		g.fillOval(1250, 450, 350, 200);
-		
-		//hippo face
-		g.setColor(Color.black);
-		g.fillOval(50, 50, 50, 25);
-		g.fillOval(60, 40, 25, 15);
-		g.drawLine(10, 90, 90, 90);
-		
+
 		
 		
 		
