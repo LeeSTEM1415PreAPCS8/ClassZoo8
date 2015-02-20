@@ -42,7 +42,7 @@ frame.setVisible(true);
 
 frame.setSize(1200, 800);
 
-frame.setLocation(375, 55);
+frame.setLocation(175, 55);
 
 moveIt();
 
@@ -52,6 +52,13 @@ class DrawPanel extends JPanel {
 	
 //sky
 public void paintComponent(Graphics g) {
+	
+	int R = (int) (Math.random( )*256);
+	int G = (int)(Math.random( )*256);
+	int B= (int)(Math.random( )*256);
+	Color randomColor = new Color(R, G, B);
+	
+	
  	g.setColor(new Color(52,186,7));
 	 g.fillRect(0, 500, 5000, 5000);
   Graphics2D g2d1 = (Graphics2D) g;
@@ -75,11 +82,12 @@ g.fillOval(1300, 400, 300, 300);
 //g.setColor(randomColor);
 //clouds
 
-g.setColor(Color.white);
-g.fillOval(10+x,10+y,500,200);
+//g.setColor(Color.white);
+//g.fillOval(10+x,10+y,500,200);
 	
 
-g.setColor(Color.blue);
+//g.setColor(Color.blue);
+g.setColor(randomColor);
 g.fillOval(10+x,10+y,500,200);
 
 g.fillOval(150+x,0+y,230,230);
