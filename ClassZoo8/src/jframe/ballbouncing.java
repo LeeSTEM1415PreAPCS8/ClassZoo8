@@ -14,13 +14,14 @@ DrawPanel drawPanel;
 private int oneX = 1000; //change these to make it move
 private int oneY = 500;//change these to make it move
 
-boolean up = false;
+//directions
+boolean up = false; //it wont go down
 
-boolean down = true;
+boolean down = true;//it will go down while going to the right
 
-boolean left = false;
+boolean left = false;//it won't move left
 
-boolean right = true;
+boolean right = true;//it will go right while going down
 
 public static void main(String[] args) {
 
@@ -30,6 +31,7 @@ new ballbouncing().go();
 
 private void go() {
 
+	//sets up the white plane and how big it is
 frame = new JFrame("Test");
 
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,7 +63,8 @@ public void paintComponent(Graphics g) {
    drawHabitat(g2);  
 	//g.setColor(new Color(109,66,22));
     
-    GradientPaint gp1 = new GradientPaint(5, 5,
+   //new gradient
+   GradientPaint gp1 = new GradientPaint(5, 5,
             Color.red, 20, 20, Color.YELLOW, true);
     g2.setPaint(gp1);
 
@@ -95,8 +98,8 @@ private void drawHabitat(Graphics2D g2)
 	g2.setColor(Color.green);
 	g2.fill(new Rectangle2D.Double(0,400,2000,600));
 	
-	
-	g2.setColor(new Color(74,64,28));//tree
+	//tree
+	g2.setColor(new Color(74,64,28));
 	g2.fill(new Rectangle2D.Double(245, 480, 100, 200));
 	g2.setColor(new Color(32,94,39));
 	g2.fill(new Ellipse2D.Double(200, 300, 200, 200)); 
@@ -116,12 +119,12 @@ while(true){
 if(oneX >= 1000){ //determines how far it will move left to right
 	
 
-right = false;
+right = false;//it won't go right
 
-left = true;
+left = true;//it will go left
 
 }
-
+//if less than 200 go right if not go left
 if(oneX <=200 ){
 
 right = true;
@@ -129,7 +132,7 @@ right = true;
 left = false;
 
 }
-
+//if greater than405 then go up if not go down
 if(oneY >= 405){
 
 up = true;
@@ -137,32 +140,32 @@ up = true;
 down = false;
 
 }
-
+//if less than 600 go down if not go up
 if(oneY <=600){
 up = false;
 
 down = true;
 
 }
-
+//if you go up then subtract oneY
 if(up){
 
 oneY--;
 
 }
-
+//if you go down then add oneY
 if(down){
 
 oneY++;
 
 }
-
+//if you go left then subtract oneX
 if(left){
 
 oneX--;
 
 }
-
+//if you right then add oneX
 if(right){
 
 oneX++;
@@ -170,7 +173,7 @@ oneX++;
 }
 
 try{
-
+//how long till it repaints the picture
 Thread.sleep(10);
 
 } catch (Exception exc){}
