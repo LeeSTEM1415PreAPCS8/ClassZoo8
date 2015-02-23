@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.applet.*;
 
-public class AnimalTemp extends Applet
+public class Elephant extends Applet
 {
 	
 	/**
