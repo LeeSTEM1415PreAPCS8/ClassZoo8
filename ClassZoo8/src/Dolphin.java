@@ -1,26 +1,28 @@
-/*Computer Science Pre-AP
-8th period
-Joe Dilly
-*/
-
 import java.awt.*;
 import java.applet.*;
-
-public class Dolphin extends Applet{
+public class Dolphin extends Applet {
 	
+
+
 	public void paint(Graphics g)
 	{
 			drawHabitat(g);
 			drawAnimal(g);
 	}
 
-	
+
+
 	private void drawHabitat(Graphics g)
 	{
 		g.setColor (Color.CYAN);
 		g.fillRect(0,0,5000,5000);
 
 	}
+	
+	
+		  	  
+		  
+		
 	
 	private void drawAnimal(Graphics g)
 	{
@@ -54,6 +56,12 @@ public class Dolphin extends Applet{
 		g.fillOval(900, 250 , 60, 60);
 	
 		
+		
+	}
+
+
+	public void run() {
+		// TODO Auto-generated method stub
 		
 	}
 	
