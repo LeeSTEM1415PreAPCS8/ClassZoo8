@@ -3,6 +3,7 @@
 //Keamber McCracken
 import java.awt.*;
 import java.applet.*;
+import java.util.Random;
 
 public class Snowleopard extends Applet{
 	
@@ -133,9 +134,30 @@ public class Snowleopard extends Applet{
 		g.setColor(new Color (0, 0, 0)); 
 		g.drawOval(545, 521, 10, 10);
 		
+		//Spots on Face
+		g.setColor(new Color (0, 0, 0));
+		g.fillOval(525, 475, 5, 5);
+		g.fillOval(531, 481, 5, 5);
+		g.fillOval(549, 449, 5, 5);
+		g.fillOval(550, 500, 5, 5);
+		g.fillOval(575, 525, 5, 5);
+		g.fillOval(550, 540, 5, 5);
+		g.fillOval(540, 490, 5, 5);
+		g.fillOval(510, 525, 5, 5);
+		g.fillOval(550, 525, 5, 5);
 		
+		//Mouth
+		g.setColor(new Color (0, 0, 0));
+		g.drawArc(525, 500, 50, 50, 0, -180);
+		
+		//Body
+		
+		
+
+		        }
+
 		
 		
 		
 	}
-}
+
