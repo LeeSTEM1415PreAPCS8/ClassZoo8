@@ -1,6 +1,6 @@
 import java.awt.*;
 import java.applet.*;
-
+//Stefanie Tijerina
 public class tiger extends Applet{
 	
 	public void paint(Graphics g)
@@ -11,10 +11,14 @@ public class tiger extends Applet{
 
 	private void drawAnimal(Graphics g)
 	{
+		Graphics2D g2d = (Graphics2D)g;
 		//tiger
-		g.setColor(new Color(250, 37, 213));
-		g.fillRect(200,400,300,200);
-		g.fillRect(100,350,100,100);
+		//g.setColor(new Color(250, 37, 213));
+        GradientPaint gp = new GradientPaint(
+	            0, 0, Color.black, 5, 5, Color.white);
+	    g2d.setPaint(gp);
+		g2d.fillRect(200,400,300,200);
+		g2d.fillRect(100,350,100,100);
 		
 				
 				

@@ -1,10 +1,11 @@
 
- import java.applet.*;
+import javax.swing.*;
+import java.applet.*;
 import java.awt.Color;
 import java.awt.Graphics;
  public class Fish extends Applet
 {
-	
+	JFrame frame;
 	
 	
 	public void paint(Graphics g)
@@ -20,27 +21,27 @@ import java.awt.Graphics;
 		//clouds
 		g.setColor(new Color(193,193,193));
 		// top right
-		g.drawOval(300, 20, 150, 50); g.fillOval(300, 20, 150, 50);
-		g.drawOval(400, 20, 150, 50); g.fillOval(400, 20, 150, 50);
-		g.drawOval(500, 20, 150, 50); g.fillOval(500, 20, 150, 50);
-		g.drawOval(600, 20, 150, 50); g.fillOval(600, 20, 150, 50);
-		g.drawOval(700, 20, 150, 50); g.fillOval(700, 20, 150, 50);
+	    g.fillOval(300, 20, 150, 50);
+		g.fillOval(400, 20, 150, 50);
+	    g.fillOval(500, 20, 150, 50);
+	    g.fillOval(600, 20, 150, 50);
+	    g.fillOval(700, 20, 150, 50);
 		// top left
-		g.drawOval(1000, 20, 150, 50); g.fillOval(1000, 20, 150, 50);
-		g.drawOval(1100, 20, 150, 50); g.fillOval(1100, 20, 150, 50);
-		g.drawOval(1200, 20, 150, 50); g.fillOval(1200, 20, 150, 50);
+		 g.fillOval(1000, 20, 150, 50);
+		 g.fillOval(1100, 20, 150, 50);
+		 g.fillOval(1200, 20, 150, 50);
 		//bottom right
-		g.drawOval(250, 40, 150, 50); g.fillOval(250, 40, 150, 50);
-		g.drawOval(350, 40, 150, 50); g.fillOval(350, 40, 150, 50);
-		g.drawOval(450, 40, 150, 50); g.fillOval(450, 40, 150, 50);
-		g.drawOval(550, 40, 150, 50); g.fillOval(550, 40, 150, 50);
-		g.drawOval(650, 40, 150, 50); g.fillOval(650, 40, 150, 50);
-		g.drawOval(750, 40, 150, 50); g.fillOval(750, 40, 150, 50);
+		 g.fillOval(250, 40, 150, 50);
+		 g.fillOval(350, 40, 150, 50);
+		 g.fillOval(450, 40, 150, 50);
+		 g.fillOval(550, 40, 150, 50);
+		 g.fillOval(650, 40, 150, 50);
+		 g.fillOval(750, 40, 150, 50);
 		//bottom left
-		g.drawOval(950, 40, 150, 50); g.fillOval(950, 40, 150, 50);
-		g.drawOval(1050, 40, 150, 50); g.fillOval(1050, 40, 150, 50);
-		g.drawOval(1150, 40, 150, 50); g.fillOval(1150, 40, 150, 50);
-		g.drawOval(1250, 40, 150, 50); g.fillOval(1250, 40, 150, 50);
+		 g.fillOval(950, 40, 150, 50);
+		 g.fillOval(1050, 40, 150, 50);
+		 g.fillOval(1150, 40, 150, 50);
+		 g.fillOval(1250, 40, 150, 50);
 		
 		
 		

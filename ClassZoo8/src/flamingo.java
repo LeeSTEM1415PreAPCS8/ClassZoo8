@@ -8,7 +8,7 @@ public class flamingo extends Applet{
 		drawAnimal(g);
 		drawHabitat(g);
 	}
-
+//Carla Carmona, 8th period Computer Science (JFRAME+ANIMATION+GRADIENT ON ANOTHER FILE)
 	
 	private void drawAnimal(Graphics g)
 	{
