@@ -1,55 +1,44 @@
-//kathleen mccusker 8th period
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.*;
-import java.applet.*;
+import java.awt.geom.Line2D;
+import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 
-public class hippo extends Applet{
-	
-	public void paint(Graphics g)
-	{
-		drawHabitat(g);
-		drawAnimal(g);
-		
-	}
+class DrawPanel extends JPanel {
 
-	private void drawAnimal(Graphics g)
-	{
-		//hippo body
-		g.setColor(new Color(64, 64, 64));
-		g.fillOval(1195, 450, 350, 200);
-		g.drawOval(1195, 450, 350, 200);
+    private void doDrawing(Graphics g) {
+
+        Graphics2D g2d = (Graphics2D) g;
+
+        
+        
+  
 		
-		//hippo face
-		g.setColor(new Color(64, 64, 64));
-		g.fillOval(1100, 435, 200, 125);
-		g.setColor(Color.black);
-		g.drawOval(1100, 435, 200, 125);
+		
+		
+
 	
-		
-		//hippo legs
-		g.setColor(new Color(64, 64, 64));
-		g.fillRect(1245, 600, 45, 60);
-		g.fillRect(1295, 600, 45, 60);
-		g.fillRect(1450, 600, 45, 60);
-		g.fillRect(1400, 600, 45, 60);
-		
-		
-		
-	}
+	//draw Habitat
 	
-	private void drawHabitat(Graphics g)
-	{
 		//sky
-		g.setColor(new Color(181, 233, 253));
-		g.fillRect(0, 0, 2000, 2000);
+		g2d.setColor(new Color(181, 233, 253));
+		GradientPaint cyantoblue = new GradientPaint(0, 0, Color.cyan, 1600, 0, Color.blue);
+		g2d.setPaint(cyantoblue);
+		g2d.fillRect(0, 0, 2000, 2000);
 		//rock wall
-		g.setColor(new Color(63, 66, 73));
-		g.fillRect(0, 300, 2000, 450);
+		g2d.setColor(new Color(63, 66, 73));
+		g2d.fillRect(0, 300, 2000, 450);
 		//sun
-		g.setColor(new Color (242, 244, 151));
-		g.fillOval(1430, 50, 125, 125);
+		g2d.setColor(new Color (242, 244, 151));
+		g2d.fillOval(1430, 50, 125, 125);
 		//rocks on wall
-		g.setColor(new Color(154, 154, 154));
+		g2d.setColor(new Color(154, 154, 154));
 		Polygon hexagon1 = new Polygon();
 		Polygon hexagon2 = new Polygon();
 		Polygon hexagon3 = new Polygon();
@@ -246,53 +235,207 @@ public class hippo extends Applet{
 		hexagon27.addPoint(1575, 562);
 		hexagon27.addPoint(1650, 637);
 		//fill
-		g.fillPolygon(hexagon1);
-		g.fillPolygon(hexagon2);
-		g.fillPolygon(hexagon3);
-		g.fillPolygon(hexagon4);
-		g.fillPolygon(hexagon5);
-		g.fillPolygon(hexagon6);
-		g.fillPolygon(hexagon7);
-		g.fillPolygon(hexagon8);
-		g.fillPolygon(hexagon9);	
-		g.fillPolygon(hexagon10);
-		g.fillPolygon(hexagon11);
-		g.fillPolygon(hexagon12);
-		g.fillPolygon(hexagon13);
-		g.fillPolygon(hexagon14);
-		g.fillPolygon(hexagon15);
-		g.fillPolygon(hexagon16);
-		g.fillPolygon(hexagon17);
-		g.fillPolygon(hexagon18);
-		g.fillPolygon(hexagon19);
-		g.fillPolygon(hexagon20);
-		g.fillPolygon(hexagon21);
-		g.fillPolygon(hexagon22);
-		g.fillPolygon(hexagon22);
-		g.fillPolygon(hexagon23);
-		g.fillPolygon(hexagon24);
-		g.fillPolygon(hexagon25);
-		g.fillPolygon(hexagon26);
-		g.fillPolygon(hexagon27);
+		g2d.fillPolygon(hexagon1);
+		g2d.fillPolygon(hexagon2);
+		g2d.fillPolygon(hexagon3);
+		g2d.fillPolygon(hexagon4);
+		g2d.fillPolygon(hexagon5);
+		g2d.fillPolygon(hexagon6);
+		g2d.fillPolygon(hexagon7);
+		g2d.fillPolygon(hexagon8);
+		g2d.fillPolygon(hexagon9);	
+		g2d.fillPolygon(hexagon10);
+		g2d.fillPolygon(hexagon11);
+		g2d.fillPolygon(hexagon12);
+		g2d.fillPolygon(hexagon13);
+		g2d.fillPolygon(hexagon14);
+		g2d.fillPolygon(hexagon15);
+		g2d.fillPolygon(hexagon16);
+		g2d.fillPolygon(hexagon17);
+		g2d.fillPolygon(hexagon18);
+		g2d.fillPolygon(hexagon19);
+		g2d.fillPolygon(hexagon20);
+		g2d.fillPolygon(hexagon21);
+		g2d.fillPolygon(hexagon22);
+		g2d.fillPolygon(hexagon22);
+		g2d.fillPolygon(hexagon23);
+		g2d.fillPolygon(hexagon24);
+		g2d.fillPolygon(hexagon25);
+		g2d.fillPolygon(hexagon26);
+		g2d.fillPolygon(hexagon27);
 		//water
-		g.setColor(Color.blue);
-		g.fillRect(0, 600, 2000, 400);
+		g2d.setColor(Color.blue);
+		GradientPaint bluetowhite = new GradientPaint(0, 0, Color.blue, 1600, 0, Color.white);
+		g2d.setPaint(bluetowhite);
+		g2d.fillRect(0, 600, 2000, 400);
 		//habitat land
-		g.setColor(new Color(142, 87, 26));
+		g2d.setColor(new Color(142, 87, 26));
 		Polygon slope = new Polygon();
 		slope.addPoint(325, 1000);
 		slope.addPoint(1100, 585);
 		slope.addPoint(2000, 585);
 		slope.addPoint(2000, 1000);
-		g.fillPolygon(slope);
+		g2d.fillPolygon(slope);
+		//habitat grass
+		g2d.setColor(Color.green);
+		Polygon grass = new Polygon();
+		grass.addPoint(1375, 585);
+		grass.addPoint(736, 1000);
+		grass.addPoint(2000, 1000);
+		grass.addPoint(2000, 585);
+		g2d.fillPolygon(grass);
 		//rail crossbars
-		g.setColor(Color.black);
-		g.fillRect(0, 200, 2000, 5);
-		g.fillRect(0, 250, 2000, 5);
+		g2d.setColor(Color.black);
+		g2d.fillRect(0, 200, 2000, 5);
+		g2d.fillRect(0, 250, 2000, 5);
 		//rail bars
 		int x = 0;
 		for (x = 0; x<2000; x = x + 15)
-		g.fillRect(x, 195, 7, 105);
+		g2d.fillRect(x, 195, 7, 105);
+		
+		
+		//thicker outline
+		g2d.setStroke(new BasicStroke(5));
+		
+		//hippo ears
+		g2d.setColor(new Color(64, 64, 64));
+		g2d.fillOval(1120, 375, 45, 45);
+		g2d.fillOval(1235, 375, 45, 45);
+		g2d.setColor(Color.black);
+		g2d.drawOval(1120, 375, 45, 45);
+		g2d.drawOval(1235, 375, 45, 45);
+		g2d.setColor(Color.pink);
+		g2d.fillOval(1135, 390, 25, 25);
+		g2d.fillOval(1243, 390, 25, 25);
+				
+		//hippo legs
+		g2d.setColor(new Color(64, 64, 64));
+		g2d.fillRect(1245, 600, 45, 60);
+		g2d.fillRect(1295, 600, 45, 60);
+		g2d.fillRect(1450, 600, 45, 60);
+		g2d.fillRect(1400, 600, 45, 60);
+		g2d.setColor(Color.black);
+		g2d.drawRect(1245, 600, 45, 60);
+		g2d.drawRect(1295, 600, 45, 60);
+		g2d.drawRect(1450, 600, 45, 60);
+		g2d.drawRect(1400, 600, 45, 60);
+		
+		//hippo body
+		g2d.setColor(new Color(64, 64, 64));
+		g2d.fillOval(1195, 450, 350, 200);
+		g2d.setColor(Color.black);
+		g2d.drawOval(1195, 450, 350, 200);
+		
+		//hippo top face
+		g2d.setColor(new Color(64, 64, 64));
+		g2d.fillOval(1125, 385, 150, 150);
+		g2d.setColor(Color.black);
+		g2d.drawOval(1125, 385, 150, 150);
+		
+		//hippo face
+		g2d.setColor(new Color(64, 64, 64));
+		g2d.fillOval(1100, 435, 200, 125);
+		g2d.setColor(Color.black);
+		g2d.drawOval(1100, 435, 200, 125);
+		
+		//hippo nostrils
+		g2d.fillOval(1150, 465, 15, 15);
+		g2d.fillOval(1225, 465, 15, 15);
+		
+		//hippo eyes
+		g2d.fillOval(1160, 417, 15, 15);
+		g2d.fillOval(1215, 417, 15, 15);
+		
+		int oneX = 0;
+		int oneY = 0;
+		//clouds
+		g2d.setColor(Color.white
+				);
+		g2d.fillOval(oneX , oneY, 250, 100);
+    }
+		
+			JFrame frame;
+			DrawPanel drawpanel;
+			private int oneX = 56;
+			boolean left = false;
+			boolean right = true;
+			
+			
+				
+			
+		
+		
+		private void MoveIt(){
+		while(true){
+			if(oneX < 5){
+				
+				right = true;
+			
+				left = false;
+				
+				}
+		if (oneX >=1350){
+			
+			right = false;
+			left = true;
+		}
+		
+		if (right){
+			oneX++;
+		}
+		
+		if (left){oneX--;
+		}
+//	catch (Exception exc){}
+	frame.repaint();
+		}
+		
+		
+
+    }
+    
+    @Override
+    public void paintComponent(Graphics g) {
+        
+        super.paintComponent(g);
+        doDrawing(g);
+    }
+}
+
+public class hippo extends JFrame {
+
+    public hippo() {
+        initUI();
+    }
+
+    public final void initUI() {
+
+        DrawPanel dpnl = new DrawPanel();
+        add(dpnl);
+
+        setSize(360, 300);
+        setTitle("Hippo at the Zoo");
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                hippo ex = new hippo();
+                ex.setVisible(true);
+            }
+        });
+    }
+}
+
+
+
+        
+    
+
+
 
 		
 		
@@ -303,5 +446,5 @@ public class hippo extends Applet{
 		
 		
 		
-	}
-}
+	
+
