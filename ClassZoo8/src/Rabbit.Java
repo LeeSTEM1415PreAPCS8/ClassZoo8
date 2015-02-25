@@ -4,7 +4,7 @@
 import java.awt.*;
 import java.applet.*;
 
-public class habitat extends Applet{
+public class Rabbit extends Applet{
 	
 	public void paint(Graphics g)
 	{
@@ -27,7 +27,7 @@ public class habitat extends Applet{
 		g.setColor(Color.black);
 		g.drawOval(465, 580, 110,54);
 		
-		//neck and cheaks
+		//head
 	
 		g.setColor(Color.white);
 		g.fillOval(412, 380, 110,110);
@@ -53,13 +53,12 @@ public class habitat extends Applet{
 		g.setColor(Color.pink);
 		g.fillOval(437, 400, 50, 30);
 		g.setColor(Color.black);
-//		g.drawOval(414, 370, 40, 30);
-	//	g.drawOval(474, 370, 40, 30);
-		//eyes
-		g.setColor(Color.black);
-		g.fillOval(434, 370, 20, 30);
-		g.fillOval(474, 370, 20, 30);
+		g.drawOval(414, 370, 40, 30);
+		g.drawOval(474, 370, 40, 30);
 		//
+		g.setColor(Color.black);
+		g.fillOval(414, 370, 20, 30);
+		g.fillOval(474, 370, 20, 30);
 		g.setColor(Color.gray);
 		g.fillOval(430, 480, 70, 90);
 //		ears
