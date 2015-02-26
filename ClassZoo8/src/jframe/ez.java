@@ -16,7 +16,7 @@ final public class ez {
 	    private int oneX = 300; //variables that control where the pig starts
 	    private int oneY = 500;
 
-	    boolean up = false; //controlls direction
+	    boolean up = false; //controls direction
 	    boolean down = true;
 	    boolean left = false;
 	    boolean right = true;
