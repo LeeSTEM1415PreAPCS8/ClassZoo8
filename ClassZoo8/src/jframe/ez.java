@@ -8,7 +8,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.GradientPaint;
 import javax.swing.*;
 import java.awt.*;
-
+//by Connor Simnitt
 final public class ez {
 	    JFrame frame;
 	    DrawPanel drawPanel;
@@ -16,7 +16,7 @@ final public class ez {
 	    private int oneX = 300; //variables that control where the pig starts
 	    private int oneY = 500;
 
-	    boolean up = false;
+	    boolean up = false; //controls direction
 	    boolean down = true;
 	    boolean left = false;
 	    boolean right = true;
@@ -26,7 +26,7 @@ final public class ez {
 	    }
 
 	    private void go() {
-	        frame = new JFrame("      A Pig - Connor Simnitt");
+	        frame = new JFrame("      A Pig - Connor Simnitt"); //.jframe window is set up here
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	        drawPanel = new DrawPanel();
@@ -36,7 +36,7 @@ final public class ez {
 	        frame.setVisible(true);
 	        frame.setResizable(false);
 	        frame.setSize(800, 800);
-	        frame.setLocation(375, 55);  //opens up the jframe
+	        frame.setLocation(375, 55);  
 	        moveIt();
 	    }
 
@@ -48,16 +48,16 @@ final public class ez {
 	           
 	            GradientPaint gp1 = new GradientPaint(0, 0, Color.red, 30, 50, Color.blue, true); g2d.setPaint(gp1);
 
-	            Rectangle2D.Double sky= new Rectangle2D.Double(0, 0, 9000, 9000); g2d.fill(sky);
+	            Rectangle2D.Double sky= new Rectangle2D.Double(0, 0, 9000, 9000); g2d.fill(sky);//sky
 	    		
 	    		GradientPaint gp2 = new GradientPaint(0, 250, Color.yellow, 0, 0, Color.green, true); g2d.setPaint(gp2);
-	    		Rectangle2D.Double land = new Rectangle2D.Double(0, 400, 9000, 9000); g2d.fill(land);
+	    		Rectangle2D.Double land = new Rectangle2D.Double(0, 400, 9000, 9000); g2d.fill(land);//land
 	    		
 	    		g.setColor(new Color (a,b,c));
-	    		Ellipse2D.Double mudpit = new Ellipse2D.Double(100, 450, 500, 200); g2d.fill(mudpit); 
+	    		Ellipse2D.Double mudpit = new Ellipse2D.Double(100, 450, 500, 200); g2d.fill(mudpit); //mudpit
 	    		
 	            g.setColor(Color.pink);
-	            Rectangle2D.Double body= new Rectangle2D.Double(oneX, oneY, 100, 50); g2d.fill(body);
+	            Rectangle2D.Double body= new Rectangle2D.Double(oneX, oneY, 100, 50); g2d.fill(body);//entire pig is made
 	            Rectangle2D.Double legL= new Rectangle2D.Double(oneX, oneY + 10, 30, 80); g2d.fill(legL);
 	            Rectangle2D.Double legR= new Rectangle2D.Double(oneX +70, oneY+10, 30, 80); g2d.fill(legR);
 	            Rectangle2D.Double head= new Rectangle2D.Double(oneX+80, oneY-20, 50, 50); g2d.fill(head);  
@@ -67,8 +67,8 @@ final public class ez {
 	    		Ellipse2D.Double eye = new Ellipse2D.Double(oneX+120, oneY-10, 10, 10); g2d.fill(eye);  // eye
 
 	    		g.setColor(Color.black);
-	    		Line2D.Double lineL= new Line2D.Double(oneX+20, oneY+50, oneX+20, oneY+88);g2d.draw(lineL); // left line
-	    		Line2D.Double lineR= new Line2D.Double(oneX+90, oneY+50, oneX+90, oneY+88);g2d.draw(lineR);  // right line
+	    		Line2D.Double lineL= new Line2D.Double(oneX+20, oneY+50, oneX+20, oneY+88);g2d.draw(lineL); // left line to show 2 legs
+	    		Line2D.Double lineR= new Line2D.Double(oneX+90, oneY+50, oneX+90, oneY+88);g2d.draw(lineR);  // right line to show 2 legs
 	    		Ellipse2D.Double pupil = new Ellipse2D.Double(oneX+125, oneY-8, 5, 5); g2d.fill(pupil);  // pupil
 	        }
 	        }
@@ -109,53 +109,3 @@ final public class ez {
 	    	        }
 	    	    }
 	    }
-	       
-	
-
-
-
-	
-	
-
-
-    
-
-   // @Override
-    //public void paintComponent(Graphics g) {
-        
-      //  super.paintComponent(g);
-        //doDrawing(g);
-        
-        
-       
-    //}
-//}
-
-//public class ez extends JFrame {
-
-//    public ez() {
-  //      initUI();
-    //}
-
-   // public final void initUI() {
-
-     //   DrawPanel dpnl = new DrawPanel();
-       // add(dpnl);
-
-        //setSize(360, 300);
-        //setTitle("The Pig in it's Natural Habitat");
-        //setLocationRelativeTo(null);
-        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //}
-
-    //public static void main(String[] args) {
-
-      //  SwingUtilities.invokeLater(new Runnable() {
-        //    public void run() {
-          //      ez ex = new ez();
-            //    ex.setVisible(true);
-            //}
-       // });
-   // }
-
-//}
