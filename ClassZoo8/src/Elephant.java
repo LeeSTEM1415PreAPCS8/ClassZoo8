@@ -1,5 +1,9 @@
+//Brenda Martinez
+//8th Period
+
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -10,7 +14,7 @@ import javax.swing.*;
 public class Elephant {
 
 	JFrame frame;
-	DrawPanel drawPanel;
+	Elephant drawPanel;
 	
 	private int oneX = 7;
 	
@@ -24,23 +28,54 @@ public class Elephant {
 	
 	private void go()
 	{
-		frame = new JFrame("Elephantttttttttttt");
+		frame = new JFrame("Elephant in The Wild");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		drawPanel = new DrawPanel();
-		frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
+		Elephant Elephant = new Elephant();
+		frame.getContentPane().add(BorderLayout.CENTER, Elephant);
 		frame.setVisible(true);
 		frame.setResizable(false);
 		frame.setSize(1600, 800);
 		frame.setLocation(0, 10);
 		moveIt();
 	}
+		private void moveIt()
+		{
+		while(true){
+	if(oneX < 5)
+		{
+		right = true;
+		left = false;
+		}
 	
-	private void moveIt() {
-		// TODO Auto-generated method stub
-		
+	if(oneX >= 1350)
+		{
+		right = false;
+		left = true;
+		}
+	
+	if (right)
+		{
+		oneX++;
+		}
+	
+	if (left)
+		{
+		oneX--;
+		}
+				
+	try
+		{
+			Thread.sleep(10);
+		}
+				
+	catch (Exception exc){}
+	frame.repaint();
+				
+		}
 	}
+}
 
-	class DrawPanel extends JPanel
+	class DrawAnimal extends JPanel
 	{ /**
 		 * 
 		 */
@@ -49,9 +84,9 @@ public class Elephant {
 		public void paintComponent(Graphics g)
 		{
 			Graphics2D g2d = (Graphics2D) g;
-			//sky
-			GradientPaint whitetoblue = new GradientPaint(0,0, Color.WHITE, 1600, 0, Color.CYAN);
-			g2d.setPaint(whitetoblue);
+			//sky - with gradient paint
+			GradientPaint orangetoyellow = new GradientPaint(0,0, (new Color(255, 180, 0)), 1600, 0, (new Color(230, 220, 0)));
+			g2d.setPaint(orangetoyellow);
 			g2d.fill((new Rectangle2D.Double(0,0,1600,1600)));
 			
 			//sun
@@ -59,7 +94,7 @@ public class Elephant {
 			g2d.fillOval(20, 20, 150, 150);
 			
 			//grass
-			g2d.setColor(new Color(128, 128, 64));
+			g2d.setColor(new Color(105, 156, 54));
 			g2d.fillRect(0, 600, 1600, 350);
 			
 			//clouds
@@ -164,42 +199,7 @@ public class Elephant {
 			g2d.fillOval(880, 470, 15, 100);						
 			g2d.fillOval(880, 565, 15, 30);
 			
-		}
-		@SuppressWarnings("unused")
-		private void moveIt()
-		{
-		while(true){
-	if(oneX < 5)
-		{
-		right = true;
-		left = false;
-		}
-	
-	if(oneX >= 1350)
-		{
-		right = false;
-		left = true;
-		}
-	
-	if (right)
-		{
-		oneX++;
-		}
-	
-	if (left)
-		{
-		oneX--;
-		}
-				
-	try
-		{
-			Thread.sleep(10);
-		}
-				
-	catch (Exception exc){}
-	frame.repaint();
-				
-		}
 	}
 }
-}
+
+
