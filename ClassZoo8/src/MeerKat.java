@@ -1,6 +1,6 @@
 import java.awt.*; 
 import java.applet.*;  
-
+//Jordan Harris
 
 public class MeerKat extends Applet{
 	{ 
@@ -64,7 +64,7 @@ public class MeerKat extends Applet{
 			       g.setColor(Color.BLACK); 
 			       g.fillOval(20, 500, 77, 30); 
 			       g.setColor(Color.BLUE); 
-			       g.fillOval(100, 500, 200, 95); 
+			       g.fillOval(100, 500, 200, 95);
 			       g.setColor(Color.BLACK); 
 			       g.fillOval(50,475, 77, 40);  
 			       g.setColor(new Color(85,62,36)); 
