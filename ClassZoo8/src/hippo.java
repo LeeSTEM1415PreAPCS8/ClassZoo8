@@ -7,14 +7,14 @@ import javax.swing.*;
 
 public class hippo extends JFrame {
 
-    class DrawHippoPanel extends JPanel {
-	
-	    private void doDrawing(Graphics g) {
+    class DrawPanel extends JPanel {
+	    
+	    private void doDrawing(Graphics g){ 
 	
 	        Graphics2D g2d = (Graphics2D) g;
 	
 	        
-	        
+	
 	  
 			
 			
@@ -343,91 +343,152 @@ public class hippo extends JFrame {
 			g2d.fillOval(1160, 417, 15, 15);
 			g2d.fillOval(1215, 417, 15, 15);
 			
-			//int oneX = 0;
-			//int oneY = 0;
-			//clouds
-			g2d.setColor(Color.white);
-			g2d.fillOval(oneX , 50, 250, 100);
-	    }
 			
-				JFrame frame;
-				DrawHippoPanel drawpanel;
-				private int oneX = 56;
-				boolean left = false;
-				boolean right = true;
-				
-				
-					
-				
-			
-			
-			private void MoveIt(){
-			while(true){
-			System.out.println("oneX");	
-				if(oneX < 5){
-					
-					right = true;
-				
-					left = false;
-					
-					}
-			if (oneX >=1350){
-				
-				right = false;
-				left = true;
-			}
-			
-			if (right){
-				oneX++;
-			}
-			
-			if (left){oneX--;
-			}
-	//	catch (Exception exc){}
-		frame.repaint();
-		System.out.println(oneX);
-			}
-			
-			
-	
-	    }
+	    }	
 	    
+	    final public class Test
+
+	    {
+	    JFrame frame;
+	    DrawPanel drawPanel;
+
+	    private int oneX = 7;
+	//    private int oneY = 7;
+	    boolean up = false;
+	    boolean down = true;
+	    boolean left = false;
+	    boolean right = true;
+    
+
+	    public void main(String[] args)
+	    	{
+	    		new Test().go();
+	    	}
+
+	    
+
+	    private void go()
+
+	    {
+
+	    frame = new JFrame("Test");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    drawPanel = new DrawPanel();
+	    frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
+	    frame.setResizable(false);
+	    frame.setSize(300, 300);
+	    class drawPanel extends JPanel {
+
+	    private static final long serialVersionUID = 1L;
+
+	    public void paintComponent(Graphics g)
+
+	    {
+
+	    	//clouds
+			g.setColor(Color.white);
+			g.fillOval(oneX , 50, 250, 100);
+
+	    	
+
+	    }
+
+	    private void moveIt()
+
+		    {
+		    	while (true)
+		    {
+
+	    if (oneX >= 283)
+	    	{
+	    		right = false;
+	    		left = true;
+	    	}
+
+	    if (oneX <= 7)
+	    	{		
+			    right = true;
+			    left = false;
+		    }
+
+	 //   if (oneY >= 259)
+	 //   	{
+	 //   		up = true;
+	 //   		down = false;
+	 //   	}
+
+	 //   if (oneY <= 7)
+	//    	{
+	 //   		up = false;
+	 //   		down = true;
+	  //  	}
+
+	 //   if (up) oneY‐‐;
+	 //   if (down) oneY++;
+	 //   if (left) oneX‐‐;
+	    if (right) oneX++;
+
+	    try
+	    	{
+	    		Thread.sleep(10);
+	    	}
+
+	    catch (Exception e)
+	    	{
+	    		e.printStackTrace();
+	    	}
+
+	    frame.repaint();
+
+	    }
+
+	    
+    }
+	    		
+	  
+
 	    @Override
 	    public void paintComponent(Graphics g) {
 	        
 	        super.paintComponent(g);
 	        doDrawing(g);
-	       // moveIt();
 	    }
 	}
 
-	public hippo() {
-        initUI();
-    }
+	public class hippo extends JFrame {
 
-    public final void initUI() {
+	    public hippo() {
+	        initUI();
+	    }
 
-        DrawHippoPanel dpnl = new DrawHippoPanel();
-        add(dpnl);
-        
+	    public final void initUI() {
 
-        setSize(360, 300);
-        setTitle("Hippo at the Zoo");
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+	        DrawPanel dpnl = new DrawPanel();
+	        add(dpnl);
 
-    public static void main(String[] args) {
+	        setSize(250, 200);
+	        setTitle("Points");
+	        setLocationRelativeTo(null);
+	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    }
 
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                hippo ex = new hippo();
-                ex.setVisible(true);
-                
-            }
-        });
-    }
-}
+	    public static void main(String[] args) {
+
+	        SwingUtilities.invokeLater(new Runnable() {
+	            @Override
+	            public void run() {
+	                hippo ex = new hippo();
+	                ex.setVisible(true);
+    };
+
+	    }
+	    }
+	}
+	    
+	    
+    
+    
+
 
 
 
