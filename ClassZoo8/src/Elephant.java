@@ -74,8 +74,8 @@ public void paintComponent(Graphics g)
 {
 	Graphics2D g2d = (Graphics2D) g;
 			//sky
-			GradientPaint bluetowhite = new GradientPaint(0,0, Color.BLUE, 1600, 0, Color.WHITE);
-			g2d.setPaint(bluetowhite);
+			GradientPaint cyantoblue = new GradientPaint(0,0, Color.CYAN, 1600, 0, Color.BLUE);
+			g2d.setPaint(cyantoblue);
 			g2d.fill((new Rectangle2D.Double(0,0,1600,1600)));
 			
 			//sun
@@ -158,5 +158,6 @@ public void paintComponent(Graphics g)
 			g.setColor(new Color(143, 143, 143));				
 			g.fillOval(880, 470, 15, 100);						
 			g.fillOval(880, 565, 15, 30);
+		}
+	}
 }
-}}
