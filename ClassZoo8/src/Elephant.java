@@ -1,140 +1,97 @@
-//Brenda Martinez
-//8th Period
-
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-import javax.swing.*;
-
-public class Elephant {
-
-	JFrame frame;
-	Elephant drawPanel;
-	
-	private int oneX = 7;
-	
-	boolean left = false;
-	boolean right = true;
-	
-	public static void main(String[] args) 
-	{
-		new Elephant().go();
-	}
-	
-	private void go()
-	{
-		frame = new JFrame("Elephant in The Wild");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Elephant Elephant = new Elephant();
-		frame.getContentPane().add(BorderLayout.CENTER, Elephant);
-		frame.setVisible(true);
-		frame.setResizable(false);
-		frame.setSize(1600, 800);
-		frame.setLocation(0, 10);
-		moveIt();
-	}
-		private void moveIt()
-		{
-		while(true){
-	if(oneX < 5)
-		{
-		right = true;
-		left = false;
-		}
-	
-	if(oneX >= 1350)
-		{
-		right = false;
-		left = true;
-		}
-	
-	if (right)
-		{
-		oneX++;
-		}
-	
-	if (left)
-		{
-		oneX--;
-		}
-				
-	try
-		{
-			Thread.sleep(10);
-		}
-				
-	catch (Exception exc){}
-	frame.repaint();
-				
-		}
-	}
+final public class Elephant 
+{
+JFrame frame;
+DrawPanel drawPanel;
+private int oneX = 56;
+boolean left = false;
+boolean right = true;
+public static void main(String[] args) {
+	new Elephant().go();
 }
 
-	class DrawAnimal extends JPanel
-	{ /**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
-		
-		public void paintComponent(Graphics g)
-		{
-			Graphics2D g2d = (Graphics2D) g;
-			//sky - with gradient paint
-			GradientPaint orangetoyellow = new GradientPaint(0,0, (new Color(255, 180, 0)), 1600, 0, (new Color(230, 220, 0)));
-			g2d.setPaint(orangetoyellow);
+private void go() 
+{
+frame = new JFrame("Elephant");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+drawPanel = new DrawPanel();
+frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
+frame.setVisible(true);
+frame.setResizable(false);
+frame.setSize(1270, 984);
+frame.setLocation(3, 4);
+moveIt();
+}
+
+@SuppressWarnings("unused")
+private void moveIt()
+{
+	while(true){
+
+		if(oneX >= 1270)
+			{
+				right = false;
+				left = true;
+			}
+
+		if(oneX <= 7)
+			{
+				right = true;
+				left = false;
+			}
+			if(left)
+			{
+				oneX--;
+			}
+
+		if(right)
+			{
+				oneX++;
+			}
+		try
+			{
+				Thread.sleep(10);
+			}
+	catch (Exception exc){}
+	frame.repaint();
+}
+}
+
+class DrawPanel extends JPanel 
+{
+/**
+	 * 
+	 */
+private static final long serialVersionUID = 1L;
+
+public void paintComponent(Graphics g) 
+{
+	Graphics2D g2d = (Graphics2D) g;
+			//sky
+			GradientPaint bluetowhite = new GradientPaint(0,0, Color.BLUE, 1600, 0, Color.WHITE);
+			g2d.setPaint(bluetowhite);
 			g2d.fill((new Rectangle2D.Double(0,0,1600,1600)));
 			
 			//sun
-			g2d.setColor(new Color(230, 220, 0));
-			g2d.fillOval(20, 20, 150, 150);
+			g2d.setColor(new Color(255, 255, 0));
+			g.fillOval(20, 20, 150, 150);
 			
 			//grass
-			g2d.setColor(new Color(105, 156, 54));
-			g2d.fillRect(0, 600, 1600, 350);
+			g2d.setColor(new Color(105, 151, 60)); g2d.fillRect(0, 600, 1600, 375);
 			
 			//clouds
-			g2d.setColor(new Color(255, 255, 255));
-			// top right
-			g2d.fillOval(300, 20, 150, 50);
-			g2d.fillOval(400, 20, 150, 50);
-			g2d.fillOval(500, 20, 150, 50);
-			g2d.fillOval(600, 20, 150, 50);
-			g2d.fillOval(700, 20, 150, 50);
-			// top left
-			g2d.fillOval(1000, 20, 150, 50);
-			g2d.fillOval(1100, 20, 150, 50);
-			g2d.fillOval(1200, 20, 150, 50);
-			//bottom right
-			g2d.fillOval(250, 40, 150, 50);
-			g2d.fillOval(350, 40, 150, 50);
-			g2d.fillOval(450, 40, 150, 50);
-			g2d.fillOval(550, 40, 150, 50);
-			g2d.fillOval(650, 40, 150, 50);
-			g2d.fillOval(750, 40, 150, 50);
-			//bottom left
-			g2d.fillOval(950, 40, 150, 50);
-			g2d.fillOval(1050, 40, 150, 50);
-			g2d.fillOval(1150, 40, 150, 50);
-			g2d.fillOval(1250, 40, 150, 50);
+			g2d.setColor(new Color(255, 255, 255)); g2d.fillOval(oneX, 70, 200, 100);
 			
 			//tree trunks
-			// #1
 			g2d.setColor(new Color(101, 70, 24));
-			g2d.fillRect(100, 450, 50, 150);
-			// #2
+			g2d.fillRect(100, 450, 50, 150);	
 			g2d.fillRect(250, 450, 50, 150);
-			// #3
-			g2d.fillRect(400, 450, 50, 150);
-			// #4
+			g2d.fillRect(400, 450, 50, 150);	
 			g2d.fillRect(1000, 450, 50, 150);
-			// #5
 			g2d.fillRect(1150, 450, 50, 150);
-			
 			
 			//tree tops
 			// #1
@@ -168,38 +125,35 @@ public class Elephant {
 			g2d.fillOval(1110, 420, 60, 45);
 			g2d.fillOval(1140, 420, 60, 45);
 			g2d.fillOval(1170, 420, 60, 45);
-			
+
 			//BODY												
-			g2d.setColor(new Color(128, 128, 128));				
-			g2d.fillRoundRect(600, 450, 300, 200, 120, 125);		
+			g.setColor(new Color(128, 128, 128));				
+			g.fillRoundRect(600, 450, 300, 200, 120, 125);		
 			//LEGS
 			//-----left
-			g2d.fillRoundRect(600, 600, 75, 100, 20, 20);			
-			g2d.fillRoundRect(625, 575, 75, 100, 20, 20);			
+			g.fillRoundRect(600, 600, 75, 100, 20, 20);			
+			g.fillRoundRect(625, 575, 75, 100, 20, 20);			
 			//-----right
-			g2d.fillRoundRect(825, 600, 75, 100, 20, 20);			
-			g2d.fillRoundRect(800, 575, 75, 100, 20, 20);			
+			g.fillRoundRect(825, 600, 75, 100, 20, 20);			
+			g.fillRoundRect(800, 575, 75, 100, 20, 20);			
 			//HEAD
-			g2d.fillOval(525, 390, 150, 150);						
+			g.fillOval(525, 390, 150, 150);						
 			//EYES
-			g2d.setColor(Color.black);							
-			g2d.fillOval(555, 425, 10, 15);						
+			g.setColor(Color.black);							
+			g.fillOval(555, 425, 10, 15);						
 			//EARS
-			g2d.setColor(new Color(128, 128, 128));				
-			g2d.fillOval(590, 380, 170, 170);						
-			g2d.setColor(Color.pink);								
-			g2d.fillOval(590, 385, 160, 160);						
+			g.setColor(new Color(128, 128, 128));				
+			g.fillOval(590, 380, 170, 170);						
+			g.setColor(Color.pink);								
+			g.fillOval(590, 385, 160, 160);						
 			//TRUNK
-			g2d.setColor(new Color(128, 128, 128));				
-			g2d.fillRoundRect(500, 450, 50, 125, 150, 125);		
-			g2d.fillRoundRect(485, 550, 50, 40, 40, 40);			
-			g2d.fillOval(510, 540, 31, 39);						
+			g.setColor(new Color(128, 128, 128));				
+			g.fillRoundRect(500, 450, 50, 125, 150, 125);		
+			g.fillRoundRect(485, 550, 50, 40, 40, 40);			
+			g.fillOval(510, 540, 31, 39);						
 			//TAIL
-			g2d.setColor(new Color(143, 143, 143));				
-			g2d.fillOval(880, 470, 15, 100);						
-			g2d.fillOval(880, 565, 15, 30);
-			
-	}
+			g.setColor(new Color(143, 143, 143));				
+			g.fillOval(880, 470, 15, 100);						
+			g.fillOval(880, 565, 15, 30);
 }
-
-
+}}
