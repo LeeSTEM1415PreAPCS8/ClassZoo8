@@ -29,12 +29,11 @@ frame.setLocation(3, 4);
 moveIt();
 }
 
-@SuppressWarnings("unused")
 private void moveIt()
 {
 	while(true){
 
-		if(oneX >= 1270)
+		if(oneX >= 1290)
 			{
 				right = false;
 				left = true;
@@ -56,7 +55,7 @@ private void moveIt()
 			}
 		try
 			{
-				Thread.sleep(10);
+				Thread.sleep(15);
 			}
 	catch (Exception exc){}
 	frame.repaint();
