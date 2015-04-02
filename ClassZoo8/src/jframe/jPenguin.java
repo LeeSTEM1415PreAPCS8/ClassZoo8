@@ -8,7 +8,7 @@ import java.awt.*;
 final public class jPenguin {
 
     JFrame frame;
-    DrawPanel drawPanel;
+    DrawPenguinPanel drawPenguinPanel;
 
     private short oneX = 7;
     private short oneY = 967;
@@ -26,9 +26,9 @@ final public class jPenguin {
         frame = new JFrame("jframe Penguin");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        drawPanel = new DrawPanel();
+        drawPenguinPanel = new DrawPenguinPanel();
 
-        frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
+        frame.getContentPane().add(BorderLayout.CENTER, drawPenguinPanel);
 
         frame.setVisible(true);
         frame.setResizable(false);
@@ -37,7 +37,7 @@ final public class jPenguin {
         moveIt();
     }
 
-    class DrawPanel extends JPanel 
+    class DrawPenguinPanel extends JPanel 
     {
         
     	public void paintComponent(Graphics g) 
@@ -75,7 +75,7 @@ final public class jPenguin {
 			if (-192<= oneX && oneX<=192)
 				sk1.setPaint(sk2);
 				
-			if (-193>=oneX && oneX>=-384 || 193<=oneX && oneX<=384 ) 
+			if (-193>=oneX && oneX>=-384 || 193<=oneX && oneX<=384 )
 				sk3.setPaint(sk4);
 				
 			if (-385>=oneX && oneX>=-576 || 385<=oneX && oneX<=576 ) 
@@ -119,7 +119,12 @@ final public class jPenguin {
 		  
 		    	//Draw Penguin
 		    //Body
-			g.setColor(Color.black);
+
+			
+			
+			
+			
+		    g.setColor(Color.black);
 			g.fillOval(400, 400, 150, 220);
 
 			//Wings

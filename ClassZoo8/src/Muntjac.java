@@ -3,7 +3,7 @@ import java.applet.*;
 //Collin Norwood
 public class Muntjac extends Applet{
 
-        public void paint(Graphics g)
+        public void DrawMuntjac(Graphics g)
         {
                 drawHabitat(g);
                 drawAnimal(g);
