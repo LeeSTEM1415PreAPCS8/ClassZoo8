@@ -1,21 +1,24 @@
 //Brenda Martinez
 //computer science 8th
 
+//JFRAME + GRADIENT + ANIMATION ALL ON THIS FILE
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-final public class Elephant 
+public class Elephant 
 {
 JFrame frame;
 DrawPanel drawPanel;
 private int oneX = 56;
-boolean left = false;
-boolean right = true;
+boolean left = false; //cloud set direction
+boolean right = true; //when returning
 public static void main(String[] args) {
 	new Elephant().go();
 }
-
+//JFRAME
 private void go() 
 {
 frame = new JFrame("Elephant");
@@ -24,16 +27,16 @@ drawPanel = new DrawPanel();
 frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
 frame.setVisible(true);
 frame.setResizable(false);
-frame.setSize(1270, 984);
+frame.setSize(1590, 850);
 frame.setLocation(3, 4);
 moveIt();
 }
-
+//cloud movement coding
 private void moveIt()
 {
 	while(true){
 
-		if(oneX >= 1290)
+		if(oneX >= 1590)
 			{
 				right = false;
 				left = true;
@@ -61,7 +64,7 @@ private void moveIt()
 	frame.repaint();
 }
 }
-
+//actual elephant and habitat coding
 class DrawPanel extends JPanel 
 {
 /**
@@ -72,7 +75,9 @@ private static final long serialVersionUID = 1L;
 public void paintComponent(Graphics g) 
 {
 	Graphics2D g2d = (Graphics2D) g;
+	//visual background
 			//sky
+			//GRADIENT
 			GradientPaint cyantoblue = new GradientPaint(0,0, Color.CYAN, 1600, 0, Color.BLUE);
 			g2d.setPaint(cyantoblue);
 			g2d.fill((new Rectangle2D.Double(0,0,1600,1600)));
@@ -127,7 +132,7 @@ public void paintComponent(Graphics g)
 			g2d.fillOval(1110, 420, 60, 45);
 			g2d.fillOval(1140, 420, 60, 45);
 			g2d.fillOval(1170, 420, 60, 45);
-
+	//actual elephant
 			//BODY												
 			g.setColor(new Color(128, 128, 128));				
 			g.fillRoundRect(600, 450, 300, 200, 120, 125);		
