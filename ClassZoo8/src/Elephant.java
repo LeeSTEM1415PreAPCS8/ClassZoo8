@@ -18,7 +18,7 @@ boolean right = true; //when returning
 public static void main(String[] args) {
 	new Elephant().go();
 }
-//JFRAME
+//JFRAME (applet window is full screen size, (1590,850))
 private void go() 
 {
 frame = new JFrame("Elephant");
