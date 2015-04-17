@@ -1,36 +1,50 @@
 //Computer Science Pre-Ap
 //8th Period
 //Keamber McCracken
+
+import javax.swing.*;
+
 import java.awt.*;
-import java.applet.*;
+import java.awt.geom.Rectangle2D;
 import java.util.Random;
 
-import javax.swing.JFrame;
+public class Snowleopard 
+{
+JFrame frame;
+static DrawPanel drawPanel;
+public void main(String[] args) {
+	new Snowleopard().go();
+}
+
+//JFRAME (applet window is full screen size, (1590,850))
+
+public void go() 
+{
+frame = new JFrame("Elephant");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+drawPanel = new DrawPanel();
+frame.getContentPane().add(BorderLayout.CENTER, drawPanel);
+frame.setVisible(true);
+frame.setResizable(false);
+frame.setSize(1590, 850);
+frame.setLocation(3, 4);
+}
 
 
-public class Snowleopard extends Applet{
+public class DrawPanel extends JPanel{
 	
-	public void paint(Graphics g)
+	/**
+	 * 
+	 */
+	public static final long serialVersionUID = 1L;
 	
-	{
-		JFrame frame;
-		
-		drawHabitat(g);
-		drawAnimal(g);
-	}
-
-	private void drawAnimal(Graphics g)
-	{
-		
-	}
-	
-	private void drawHabitat(Graphics g)
+	public void paintComponent(Graphics g)
 	{
 		Graphics2D g2d= (Graphics2D) g;
 		//Sky
 		GradientPaint cyantoblue = new GradientPaint(0, 0, Color.cyan, 1600, 0, Color.blue);
 		g2d.setPaint(cyantoblue);
-		g2d.fillRect(0, 0, 1600, 1600);
+		g2d.fill((new Rectangle2D.Double(0,0,1600,1600)));
 		
 		
 		//Sun
@@ -176,18 +190,8 @@ public class Snowleopard extends Applet{
 			g2d.fillOval(x, y, 5, 5);
 			int black = randint.nextInt(50);
 			g2d.setColor(new Color (black));
-			
-		
-			
-			
-				
-		
-
-		        }
-
-		
-		
-		
+		}
 	}
+}
 }
 
